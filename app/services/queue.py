@@ -6,10 +6,9 @@ from app.common.base_schemas import AppID
 logger = logging.getLogger(__name__)
 
 
-# TODO statuses: pending, working, completed, failed
 class PollReviewsTask:
 
-    def __init__(self, app_id: AppID):
+    def __init__(self, app_id: AppID) -> None:
         self._app_id = app_id
         self._is_completed = asyncio.Event()
 
@@ -48,6 +47,7 @@ class DataPollingQueue:
         self._completed: dict[str, PollReviewsTask] = {}
 
     def push(self, app_id: AppID, *, urgent: bool = False) -> PollReviewsTask:
+        """Add task for the given App ID to the queue. Omit duplicate tasks."""
         task = PollReviewsTask(app_id)
 
         if pending_task := self._pending.get(task.id):
@@ -67,6 +67,7 @@ class DataPollingQueue:
         return task
 
     async def pop(self) -> PollReviewsTask:
+        """Get the next task from the queue. If there is no task, wait for a task."""
         if not self._queue:
             logger.debug("No task in queue, waiting for a task...")
             await self._is_queue_filled.wait()
@@ -80,10 +81,12 @@ class DataPollingQueue:
         return task
 
     async def wait_all_pending_and_progress(self) -> None:
+        """Wait for all pending and in progress tasks to complete."""
         tasks = [*self._pending.values(), *self._in_progress.values()]
         await asyncio.gather(*[asyncio.ensure_future(task) for task in tasks])
 
     def mark_complete(self, task: PollReviewsTask) -> None:
+        """Mark task as complete."""
         self._in_progress.pop(task.id)
         self._completed[task.id] = task
         task.mark_complete()

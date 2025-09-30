@@ -1,8 +1,8 @@
 from http import HTTPMethod
 
+from app.common import base_schemas as schemas
 from app.common.base_adapter import HTTPAdapterBase
 from app.common.base_schemas import AppID
-from app.services import schemas
 
 
 class AppStoreReviewViewerAdapter(HTTPAdapterBase):

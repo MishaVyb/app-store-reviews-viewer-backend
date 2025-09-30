@@ -24,6 +24,8 @@ class SchedulerService:
         self._delay = delay
 
     async def run(self) -> None:
+        """Run the scheduler in the background."""
+        logger.info("Start scheduler in the background: %s", self)
         while True:
             await self.process()
             await asyncio.sleep(self._delay)

@@ -9,9 +9,9 @@ import httpx
 import uvicorn
 
 from app.api.app import FastAPIApplication
+from app.common import base_schemas as schemas
 from app.config import AppSettings
 from app.integration.itunes.adapter import ItunesRSSAdapter
-from app.services import schemas
 from app.services.polling import DataPollingWorker
 from app.services.queue import DataPollingQueue
 from app.services.scheduller import SchedulerService
@@ -20,21 +20,15 @@ from app.services.storage import StorageService
 logger = logging.getLogger("app.main")
 
 
-def setup_logging(settings: AppSettings) -> None:
-    if settings.LOG_DIR_CREATE and not settings.LOG_DIR.exists():
-        settings.LOG_DIR.mkdir()
-    logging.config.dictConfig(settings.LOGGING)
-
-
-def setup(settings: AppSettings | None = None) -> FastAPIApplication:
-    settings = settings or AppSettings()
-    setup_logging(settings)
-    logger.info("Run app worker [%s]", click.style(os.getpid(), fg="cyan"))
-    return FastAPIApplication.startup(settings, lifespan)
-
-
 @asynccontextmanager
 async def lifespan(app: FastAPIApplication):
+    """
+    Lifespan for the backend services.
+
+    For demo purposes all services are started withing one FastAPI base application.
+    But in production all services should run as separate applications with proper
+    inter-service communication.
+    """
 
     app.state.event_loop_tasks = []
     app.state.workers = []
@@ -86,6 +80,20 @@ def setup_workers(app: FastAPIApplication) -> None:
         )
         app.state.event_loop_tasks.append(asyncio.create_task(worker.run()))
         app.state.workers.append(worker)
+
+
+def setup_logging(settings: AppSettings) -> None:
+    if settings.LOG_DIR_CREATE and not settings.LOG_DIR.exists():
+        settings.LOG_DIR.mkdir()
+    logging.config.dictConfig(settings.LOGGING)
+
+
+def setup(settings: AppSettings | None = None) -> FastAPIApplication:
+    """Build FastAPI application."""
+    settings = settings or AppSettings()
+    setup_logging(settings)
+    logger.info("Run app worker [%s]", click.style(os.getpid(), fg="cyan"))
+    return FastAPIApplication.startup(settings, lifespan)
 
 
 def main() -> None:

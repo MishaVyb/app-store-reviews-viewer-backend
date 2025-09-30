@@ -31,6 +31,8 @@ async def test_get_apps(
 async def test_get_known_reviews(
     client: AppStoreReviewViewerAdapter, app: FastAPIApplication
 ) -> None:
+
+    # for the first time, there are no reviews for this app, because polling task is not yet completed
     app_id = TEST_APP_ID_INITIAL_1
     res = await client.get_reviews(app_id)
     assert len(res.items) == 0
@@ -40,11 +42,13 @@ async def test_get_known_reviews(
     assert task_id not in app.state.queue._in_progress
     assert task_id not in app.state.queue._completed
 
+    # wait for the polling task to be completed
     await app.state.queue.wait_all_pending_and_progress()
     assert task_id not in app.state.queue._in_progress
     assert task_id not in app.state.queue._pending
     assert task_id in app.state.queue._completed
 
+    # call one more time to get reviews after storage population
     res = await client.get_reviews(app_id)
     assert len(res.items) == TEST_REVIEWS_COUNT
 
@@ -52,6 +56,8 @@ async def test_get_known_reviews(
 async def test_get_unknown_reviews(
     client: AppStoreReviewViewerAdapter, app: FastAPIApplication
 ) -> None:
+    # in that case get_reviews will return reviews for the unknown app at first(!) request
+    # because it waits for the polling task to be completed (since the service got new app id to handle)
     res = await client.get_reviews(TEST_APP_ID_UNKNOWN)
     assert len(res.items) == TEST_REVIEWS_COUNT
 
@@ -59,6 +65,8 @@ async def test_get_unknown_reviews(
 async def test_get_reviews_pagination(
     client: AppStoreReviewViewerAdapter, app: FastAPIApplication, mocker: MockerFixture
 ) -> None:
+    # check that worker calls external RSS server only once since since last comment was written long time ago
+    # see settings.POLLING_REVIEWS_DEPTH
     spy = mocker.spy(app.state.external, "get_reviews")
     res = await client.get_reviews(TEST_APP_ID_NO_REVIEWS)
     assert not res.items

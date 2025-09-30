@@ -66,6 +66,7 @@ async def mock_external_http_requests(
     async def callback(request: httpx.Request) -> httpx.Response:
         await asyncio.sleep(0)  # switch event loop task
 
+        # extract app id from the request url
         match = re.match(r".*/id=(\d+)/.*", request.url.path)
         assert match
         app_id = match.group(1)

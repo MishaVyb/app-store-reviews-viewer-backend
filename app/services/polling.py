@@ -3,8 +3,8 @@ import logging
 from datetime import datetime, timedelta, timezone
 from typing import Never
 
+from app.common import base_schemas as schemas
 from app.integration.itunes.adapter import ItunesRSSAdapter
-from app.services import schemas
 from app.services.queue import DataPollingQueue, PollReviewsTask
 from app.services.storage import StorageService
 
@@ -12,7 +12,10 @@ logger = logging.getLogger(__name__)
 
 
 class DataPollingWorker:
-    """Service to poll data from external sources."""
+    """
+    Service to poll data from external sources.
+    Thy system may run many workers at one time to poll data from external sources concurrently.
+    """
 
     def __init__(
         self,
@@ -22,7 +25,7 @@ class DataPollingWorker:
         *,
         id: str,
         polling_depth: timedelta,
-    ):
+    ) -> None:
         self._storage = storage
         self._queue = queue
         self._adapter = adapter
@@ -38,22 +41,35 @@ class DataPollingWorker:
         await self._is_available.wait()
 
     async def run(self) -> Never:
-        logger.info("Start worker: %s", self)
+        logger.info("Start worker in the background: %s", self)
         while True:
             self._is_available.set()
+
+            # wait for the next task, if there is no task, the worker is blocked
             task = await self._queue.pop()
+
             try:
                 await self.process(task)
             except Exception as e:
                 logger.exception(f"Error reviews polling for app {task.app_id}: {e}")
             finally:
+                # NOTE
+                # No matter are there errors or not, the task is marked as complete.
+                # This is important to avoid blocking the queue.
+                # In case of error, user gets no response for this App.
                 self._queue.mark_complete(task)
                 self._is_available.clear()
 
     async def process(self, task: PollReviewsTask) -> None:
+        """
+        Process task to poll reviews for a given App.
+
+        It calls external adapter to get reviews, build compatible with StorageService
+        data and then create these entities in the storage.
+        """
         logger.debug("%s; Processing task: %s", self, task)
 
-        reviews = []
+        reviews: list[schemas.Review] = []
         for page in range(1, self._adapter.MAX_PAGES + 1):
             response = await self._adapter.get_reviews(task.app_id, page)
             if not response.feed.entry:
@@ -61,6 +77,7 @@ class DataPollingWorker:
 
             for entry in response.feed.entry:
                 review = schemas.Review(
+                    # NOTE:
                     # review id might be not unique among all apps, so build composed review id
                     id=f"{task.app_id}_{entry.id.label}",
                     app_id=task.app_id,

@@ -4,8 +4,8 @@ from typing import TYPE_CHECKING
 
 from fastapi import APIRouter
 
+from app.common import base_schemas as schemas
 from app.common.base_schemas import AppID
-from app.services import schemas
 
 if TYPE_CHECKING:
     from app.api.app import Request
@@ -21,6 +21,8 @@ logger = logging.getLogger(__name__)
 
 @apps.get("")
 async def get_apps(request: Request) -> schemas.GetAppsResponse:
+    """Get current apps from the storage."""
+
     adapter = request.app.state.storage
     res = schemas.GetAppsResponse(items=await adapter.get_app_list())
     logger.debug(f"Got {len(res.items)} apps")
@@ -34,6 +36,8 @@ async def get_reviews(
     *,
     updated_min: datetime | None = None,
 ) -> schemas.GetReviewsResponse:
+    """Get reviews for a given App ID."""
+
     logger.info("Handle HTTP Request: %s %s", request.method, request.url)
 
     storage = request.app.state.storage
@@ -50,7 +54,7 @@ async def get_reviews(
         task = queue.push(app_id)
         await task
 
-        # NOTE: create app only after polling is completed
+        # create app only after polling is completed
         app = schemas.App(id=app_id)
         await storage.create_app(app)
 

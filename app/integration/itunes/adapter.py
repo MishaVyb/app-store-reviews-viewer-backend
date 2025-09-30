@@ -26,16 +26,6 @@ class ItunesRSSAdapter(HTTPAdapterBase):
         )
         return response
 
-    # TODO 48 hours or more if there is no reviews
-    # async def get_reviews_with_pagination(
-    #     self,
-    #     app_id: str,
-    #     page: int | None = None,  # start page number
-    #     sort_by: Literal["mostRecent"] | None = "mostRecent",
-    #     date_update_min: datetime | None = None,
-    # ) -> schemas.ITunesReviewsResponse:
-    #     """Get reviews for a given app ID and page."""
-
     def _build_path(
         self,
         app_id: str,

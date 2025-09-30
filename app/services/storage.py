@@ -5,8 +5,8 @@ from pathlib import Path
 
 from pydantic import BaseModel
 
+from app.common import base_schemas as schemas
 from app.common.base_schemas import AppID, ReviewId
-from app.services import schemas
 
 logger = logging.getLogger(__name__)
 
@@ -17,7 +17,7 @@ class Storage(BaseModel):
 
 
 class StorageService:
-    """Persistence service."""
+    """Simple file based persistence service."""
 
     def __init__(self, path: Path) -> None:
         self._storage = Storage()
@@ -50,15 +50,13 @@ class StorageService:
         self, app_id: AppID, *, updated_min: datetime | None = None
     ) -> list[schemas.Review]:
         logger.debug("Getting reviews for app: %s", app_id)
-        return sorted(
-            [
-                review
-                for review in self._storage.reviews.values()
-                if review.app_id == app_id
-                and (updated_min is None or review.updated >= updated_min)
-            ],
-            key=lambda x: x.updated,
-        )
+        filtered = [
+            review
+            for review in self._storage.reviews.values()
+            if review.app_id == app_id
+            and (updated_min is None or review.updated >= updated_min)
+        ]
+        return sorted(filtered, key=lambda x: x.updated)
 
     async def load(self) -> bool:
         if not self._path.exists() or self._path.read_text() == "":
