@@ -57,7 +57,7 @@ async def lifespan(app: FastAPIApplication):
 
 
 async def setup_storage(app: FastAPIApplication) -> StorageService:
-    storage = StorageService()
+    storage = StorageService(app.state.settings.STORAGE_PATH)
     for app_id in app.state.settings.STORAGE_INITIAL_APP_IDS:
         await storage.create_app(schemas.App(id=app_id))
     return storage

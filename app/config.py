@@ -51,6 +51,10 @@ class AppSettings(BaseModel):
     LOG_BACKUP_COUNT: int = 10
 
     @property
+    def STORAGE_PATH(self) -> Path:
+        return self.ROOT_DIR / "data" / "storage.json"
+
+    @property
     def API_OPENAPI_URL(self) -> str:
         return f"{self.API_PREFIX}/openapi.json"
 

@@ -1,6 +1,9 @@
+import asyncio
 import logging
+from pathlib import Path
+from typing import Any, Type
 
-from pydantic import BaseModel
+from pydantic import BaseModel, TypeAdapter
 
 from app.common.base_schemas import AppID, ReviewId
 from app.services import schemas
@@ -16,12 +19,14 @@ class Storage(BaseModel):
 class StorageService:
     """Persistence service."""
 
-    def __init__(self):
+    def __init__(self, path: Path) -> None:
         self._storage = Storage()
+        self._path = path
 
     async def create_app(self, app: schemas.App):
         logger.debug("Creating app: %s", app)
         self._storage.apps[app.id] = app
+        await self._commit()
 
     async def get_app(self, app_id: AppID) -> schemas.App | None:
         logger.debug("Getting app: %s", app_id)
@@ -35,6 +40,7 @@ class StorageService:
         logger.debug("Creating reviews: %s", len(reviews))
         for review in reviews:
             self._storage.reviews[review.id] = review
+        await self._commit()
 
     async def get_review(self, review_id: ReviewId) -> schemas.Review | None:
         logger.debug("Getting review: %s", review_id)
@@ -47,3 +53,6 @@ class StorageService:
             for review in self._storage.reviews.values()
             if review.app_id == app_id
         ]
+
+    async def _commit(self) -> None:
+        await asyncio.to_thread(self._path.write_text, self._storage.model_dump_json())

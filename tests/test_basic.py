@@ -35,7 +35,7 @@ async def test_get_known_reviews(
     assert task_id not in app.state.queue._in_progress
     assert task_id not in app.state.queue._completed
 
-    await app.state.queue._pending[task_id]
+    await app.state.queue.wait_all_pending_and_progress()
     assert task_id not in app.state.queue._in_progress
     assert task_id not in app.state.queue._pending
     assert task_id in app.state.queue._completed
@@ -65,6 +65,8 @@ async def test_get_reviews_race_condition(
     res = task.result()
     assert len(res.items) == 0  # no reviews yet for this app
     assert spy.call_count == 1  # only one worker initially polled reviews for targe app
+
+    await app.state.queue.wait_all_pending_and_progress()
 
     # following requests for the same app should return reviews
     # - polling task has been scheduled on previous request

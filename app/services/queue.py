@@ -21,7 +21,7 @@ class PollReviewsTask:
     def id(self) -> str:
         return f"task_{self._app_id}"
 
-    def complete(self) -> None:
+    def mark_complete(self) -> None:
         self._is_completed.set()
 
     def __await__(self):
@@ -79,7 +79,11 @@ class DataPollingQueue:
         self._in_progress[task.id] = task
         return task
 
-    def complete(self, task: PollReviewsTask) -> None:
+    async def wait_all_pending_and_progress(self) -> None:
+        tasks = [*self._pending.values(), *self._in_progress.values()]
+        await asyncio.gather(*[asyncio.ensure_future(task) for task in tasks])
+
+    def mark_complete(self, task: PollReviewsTask) -> None:
         self._in_progress.pop(task.id)
         self._completed[task.id] = task
-        task.complete()
+        task.mark_complete()

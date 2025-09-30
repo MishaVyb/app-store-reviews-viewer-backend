@@ -37,7 +37,7 @@ class DataPollingWorker:
                 # raise NotImplementedError
 
             else:
-                self._queue.complete(task)
+                self._queue.mark_complete(task)
 
     async def process(self, task: PollReviewsTask) -> None:
         logger.debug("%s; Processing task: %s", self, task)
@@ -46,7 +46,8 @@ class DataPollingWorker:
         reviews = []
         for entry in response.feed.entry:
             review = schemas.Review(
-                id=entry.id.label,
+                # review id might be not unique among all apps, so build composed review id
+                id=f"{task.app_id}_{entry.id.label}",
                 app_id=task.app_id,
                 title=entry.title.label,
                 content=entry.content.label,
