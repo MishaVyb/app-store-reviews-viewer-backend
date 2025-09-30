@@ -1,13 +1,20 @@
+import asyncio
 import logging
 import logging.config
 import os
 from contextlib import asynccontextmanager
 
 import click
+import httpx
 import uvicorn
 
-from app.api.app import AppStoreReviewsViewer
+from app.api.app import FastAPIApplication
 from app.config import AppSettings
+from app.integration.itunes.adapter import ItunesRSSAdapter
+from app.services import schemas
+from app.services.polling import DataPollingWorker
+from app.services.queue import DataPollingQueue
+from app.services.storage import StorageService
 
 logger = logging.getLogger("app.main")
 
@@ -18,19 +25,54 @@ def setup_logging(settings: AppSettings) -> None:
     logging.config.dictConfig(settings.LOGGING)
 
 
-def setup() -> AppStoreReviewsViewer:
+def setup() -> FastAPIApplication:
     settings = AppSettings()
     setup_logging(settings)
     logger.info("Run app worker [%s]", click.style(os.getpid(), fg="cyan"))
-    return AppStoreReviewsViewer.startup(settings, lifespan)
+    return FastAPIApplication.startup(settings, lifespan)
 
 
 @asynccontextmanager
-async def lifespan(app: AppStoreReviewsViewer):
+async def lifespan(app: FastAPIApplication):
+
+    app.state.event_loop_tasks = []
+    app.state.workers = []
+    app.state.queue = DataPollingQueue()
+
     try:
-        yield
+        # TODO run SchedulerService who schedule tasks to workers in background
+        app.state.storage = await setup_storage(app)
+
+        async with httpx.AsyncClient(
+            base_url=app.state.settings.HTTP_EXTERNAL_RSS_HOST,
+            timeout=app.state.settings.HTTP_EXTERNAL_RSS_TIMEOUT,
+        ) as client:
+            app.state.external = ItunesRSSAdapter(client)
+            setup_workers(app)
+
+            yield
     finally:
-        pass
+        for task in app.state.event_loop_tasks:
+            task.cancel()
+
+
+async def setup_storage(app: FastAPIApplication) -> StorageService:
+    storage = StorageService()
+    for app_id in app.state.settings.STORAGE_INITIAL_APP_IDS:
+        await storage.create_app(schemas.App(id=app_id))
+    return storage
+
+
+def setup_workers(app: FastAPIApplication):
+    for idx in range(app.state.settings.POOLING_WORKERS_NUM):
+        worker = DataPollingWorker(
+            app.state.storage,
+            app.state.queue,
+            app.state.external,
+            id=f"worker_{idx}",
+        )
+        app.state.event_loop_tasks.append(asyncio.create_task(worker.run()))
+        app.state.workers.append(worker)
 
 
 def main() -> None:
@@ -42,12 +84,18 @@ def main() -> None:
     logger.info("Run %s (%s)", settings.APP_NAME, settings.APP_VERSION)
     logger.info("Settings: %s", settings)
 
+    if settings.API_WORKERS:
+        raise NotImplementedError(
+            "Horizontal scaling by running multiple instances is not supported "
+            "due to unsafe file storage sharing between instances. "
+        )
+
     uvicorn.run(
         "app.main:setup",
-        host=settings.APP_HOST,
-        port=settings.APP_PORT,
-        workers=settings.APP_WORKERS,
-        reload=settings.APP_RELOAD,
+        host=settings.API_HOST,
+        port=settings.API_PORT,
+        workers=settings.API_WORKERS,
+        reload=settings.API_RELOAD,
         factory=True,
     )
 

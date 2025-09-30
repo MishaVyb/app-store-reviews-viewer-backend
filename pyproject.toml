@@ -1,7 +1,7 @@
 [project]
 name = "app-store-reviews-viewer-backend"
 version = "0.1.0"
-description = ""
+description = "Recent iOS AppStore Reviews Viewer Backend"
 authors = [{ name = "Mikhail Vybornyi", email = "vbrn.mv@gmail.com" }]
 readme = "README.md"
 requires-python = ">=3.13"

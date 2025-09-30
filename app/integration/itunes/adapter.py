@@ -1,22 +1,14 @@
 from http import HTTPMethod
-from pathlib import Path
-from typing import Literal, Type, TypeVar
+from typing import Literal
 
 import httpx
-from fhir.resources.observation import Observation
-from fhir.resources.patient import Patient
-from pydantic import BaseModel
 
-from app.adapter.base import HTTPAdapterBase, QueryParamTypes
-
-_T = TypeVar("_T")
+from app.common.base_adapter import HTTPAdapterBase
+from app.integration.itunes import schemas
 
 
 class ItunesRSSAdapter(HTTPAdapterBase):
-    """
-    Adapter for the third party Itunes RSS server.
-    https://itunes.apple.com/us/rss/customerreviews
-    """
+    """HTTP Adapter for the third party Itunes RSS server."""
 
     _api_prefix = "/us/rss/customerreviews"
 
@@ -24,24 +16,40 @@ class ItunesRSSAdapter(HTTPAdapterBase):
         self,
         app_id: str,
         page: int | None = None,
-        sort_by: Literal["mostRecent"] | None = None,
-    ) -> list[AppStoreReview]:
+        sort_by: Literal["mostRecent"] | None = "mostRecent",
+    ) -> schemas.ITunesReviewsResponse:
         """Get reviews for a given app ID and page."""
+        path = self._build_path(app_id, page, sort_by)
         response = await self._call_service(
-            HTTPMethod.GET, url, response_schema=list[AppStoreReview]
+            HTTPMethod.GET, path, response_schema=schemas.ITunesReviewsResponse
         )
         return response
 
-    def _use_url(
+    # TODO 48 hours or more if there is no reviews
+    # async def get_reviews_with_pagination(
+    #     self,
+    #     app_id: str,
+    #     page: int | None = None,  # start page number
+    #     sort_by: Literal["mostRecent"] | None = "mostRecent",
+    #     date_update_min: datetime | None = None,
+    # ) -> schemas.ITunesReviewsResponse:
+    #     """Get reviews for a given app ID and page."""
+
+    def _build_path(
         self,
         app_id: str,
-        page: int | None = None,
-        sort_by: Literal["mostRecent"] | None = None,
-    ) -> str:
-        url = f"id={app_id}"
+        page: int | None,
+        sort_by: Literal["mostRecent"] | None,
+    ) -> httpx.URL:
+        url = f"/id={app_id}"
         if sort_by:
             url += f"/sortBy={sort_by}"
         if page:
+            if page > 10:
+                raise ValueError(
+                    "Page number must be less than 10. External server limitation."
+                )
             url += f"/page={page}"
+
         url += "/json"
         return super()._use_url(url)

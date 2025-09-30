@@ -1,8 +1,8 @@
 from __future__ import annotations
 
+import asyncio
 import logging
-from contextlib import asynccontextmanager
-from typing import AsyncGenerator, Callable, Type
+from typing import Type
 
 import fastapi.datastructures
 from fastapi import FastAPI
@@ -11,22 +11,37 @@ from starlette.types import Lifespan
 
 from app.api import routes
 from app.config import AppSettings
+from app.integration.itunes.adapter import ItunesRSSAdapter
+from app.services.polling import DataPollingWorker
+from app.services.queue import DataPollingQueue
+from app.services.storage import StorageService
 
 logger = logging.getLogger(__name__)
 
 
-class AppStoreReviewsViewer(FastAPI):
+class Request(fastapi.Request):
+    app: FastAPIApplication
+
+
+class FastAPIApplication(FastAPI):
     class State(fastapi.datastructures.State):
         settings: AppSettings
+        event_loop_tasks: list[asyncio.Task]
+
+        # Services:
+        storage: StorageService
+        queue: DataPollingQueue
+        workers: list[DataPollingWorker]
+        external: ItunesRSSAdapter
 
     state: State
 
     @classmethod
     def startup(
-        cls: Type[AppStoreReviewsViewer],
+        cls: Type[FastAPIApplication],
         settings: AppSettings,
-        lifespan: Lifespan[AppStoreReviewsViewer],
-    ) -> AppStoreReviewsViewer:
+        lifespan: Lifespan[FastAPIApplication],
+    ) -> FastAPIApplication:
         app = cls(
             title=settings.APP_NAME,
             description=settings.APP_DESCRIPTION,
@@ -41,16 +56,14 @@ class AppStoreReviewsViewer(FastAPI):
 
         app.add_middleware(
             CORSMiddleware,
-            allow_origins=settings.APP_CORS_ORIGINS,
+            allow_origins=settings.API_CORS_ORIGINS,
             allow_credentials=True,
             allow_methods=["*"],
             allow_headers=["*"],
         )
 
-        app.include_router(routes.patients, prefix=settings.API_PREFIX)
-        app.include_router(routes.observations, prefix=settings.API_PREFIX)
-        app.include_router(routes.concepts, prefix=settings.API_PREFIX)
-        app.include_router(routes.score, prefix=settings.API_PREFIX)
+        app.include_router(routes.apps, prefix=settings.API_PREFIX)
+        app.include_router(routes.reviews, prefix=settings.API_PREFIX)
         app.include_router(routes.monitoring, prefix=settings.API_PREFIX)
 
         return app

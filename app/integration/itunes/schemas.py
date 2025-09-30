@@ -1,85 +1,82 @@
+from typing import List, Optional
 
-from pydantic import BaseModel, Field
-from typing import List, Optional, Union
-from datetime import datetime
+from pydantic import BaseModel, ConfigDict, Field
 
 
-class LabelField(BaseModel):
-    """Base schema for fields that have a 'label' property"""
+class BaseSchema(BaseModel):
+    model_config = ConfigDict(
+        populate_by_name=True,
+        validate_default=True,
+        json_schema_serialization_defaults_required=True,
+    )
+
+
+class Label(BaseSchema):
     label: str
 
 
-class AttributesField(BaseModel):
-    """Base schema for fields that have an 'attributes' property"""
+class Attributes(BaseSchema):
     attributes: dict
 
 
-class LinkAttributes(BaseModel):
-    """Schema for link attributes"""
+class LinkAttributes(BaseSchema):
     rel: str
     href: str
     type: Optional[str] = None
 
 
-class ContentAttributes(BaseModel):
-    """Schema for content attributes"""
+class ContentAttributes(BaseSchema):
     type: str
 
 
-class ContentTypeAttributes(BaseModel):
-    """Schema for content type attributes"""
+class ContentTypeAttributes(BaseSchema):
     term: str
     label: str
 
 
-class Author(BaseModel):
-    """Schema for review author"""
-    uri: LabelField
-    name: LabelField
+class Author(BaseSchema):
+    uri: Label
+    name: Label
     label: str = ""
 
 
-class ReviewEntry(BaseModel):
-    """Schema for individual review entry"""
+class ReviewEntry(BaseSchema):
+    """Schema for individual review entry."""
+
+    id: Label
     author: Author
-    updated: LabelField
-    im_rating: LabelField = Field(alias="im:rating")
-    im_version: LabelField = Field(alias="im:version")
-    id: LabelField
-    title: LabelField
-    content: LabelField
-    link: AttributesField
-    im_vote_sum: LabelField = Field(alias="im:voteSum")
-    im_content_type: AttributesField = Field(alias="im:contentType")
-    im_vote_count: LabelField = Field(alias="im:voteCount")
-
-    class Config:
-        allow_population_by_field_name = True
+    updated: Label
+    im_rating: Label = Field(alias="im:rating")
+    im_version: Label = Field(alias="im:version")
+    title: Label
+    content: Label
+    link: Attributes
+    im_vote_sum: Label = Field(alias="im:voteSum")
+    im_content_type: Attributes = Field(alias="im:contentType")
+    im_vote_count: Label = Field(alias="im:voteCount")
 
 
-class FeedAuthor(BaseModel):
-    """Schema for feed author"""
-    name: LabelField
-    uri: LabelField
+class FeedAuthor(BaseSchema):
+    name: Label
+    uri: Label
 
 
-class FeedLink(BaseModel):
-    """Schema for feed links"""
+class FeedLink(BaseSchema):
     attributes: LinkAttributes
 
 
-class Feed(BaseModel):
-    """Schema for the main feed structure"""
+class Feed(BaseSchema):
+    id: Label
+    entry: List[ReviewEntry] = []
     author: FeedAuthor
-    entry: List[ReviewEntry]
-    updated: LabelField
-    rights: LabelField
-    title: LabelField
-    icon: LabelField
+    updated: Label
+    rights: Label
+    title: Label
+    icon: Label
     link: List[FeedLink]
-    id: LabelField
 
 
-class ITunesReviewsResponse(BaseModel):
-    """Root schema for iTunes App Store reviews response"""
+class ITunesReviewsResponse(BaseSchema):
+    """Root schema for iTunes App Store reviews response."""
+
     feed: Feed

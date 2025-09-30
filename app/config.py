@@ -3,6 +3,8 @@ from typing import Any, Literal
 
 from pydantic import BaseModel, ConfigDict
 
+from app.common.base_schemas import AppID
+
 
 class AppSettings(BaseModel):
     model_config = ConfigDict(
@@ -14,26 +16,28 @@ class AppSettings(BaseModel):
 
     ROOT_DIR: Path = Path(__file__).resolve().parent.parent
 
-    APP_ENVIRONMENT: Literal["dev", "staging", "production"] = 'dev'
+    APP_ENVIRONMENT: Literal["dev", "staging", "production"] = "dev"
     APP_NAME: str = "App Store Reviews Viewer"
     APP_DESCRIPTION: str = "App Store Reviews Viewer API"
     APP_VERSION: str = "1.0.0.0"
 
-    APP_PORT: int = 8000
-    APP_HOST: str = "0.0.0.0"
-    APP_WORKERS: int | None = None
-    APP_RELOAD: bool = False
+    API_PORT: int = 8000
+    API_HOST: str = "0.0.0.0"
+    API_WORKERS: int | None = None
+    API_RELOAD: bool = False
 
-    APP_CORS_ORIGINS: list[str] = ["http://localhost:3000"]
+    API_CORS_ORIGINS: list[str] = ["http://localhost:3000"]
     API_PREFIX: str = "/api"
 
-    @property
-    def API_OPENAPI_URL(self) -> str:
-        return f"{self.API_PREFIX}/openapi.json"
+    POOLING_WORKERS_NUM: int = 10
+    STORAGE_INITIAL_APP_IDS: list[AppID] = [
+        415458524,  # SkyScanner
+        595068606,  # Tab
+        640437525,  # Qantas
+    ]
 
-    @property
-    def API_DOCS_URL(self) -> str:
-        return f"{self.API_PREFIX}/docs"
+    HTTP_EXTERNAL_RSS_HOST: str = "https://itunes.apple.com/us/rss/customerreviews"
+    HTTP_EXTERNAL_RSS_TIMEOUT: float = 59.0
 
     LOG_LEVEL: str = "DEBUG"
     LOG_LEVEL_CONFTEST: str = "DEBUG"
@@ -45,6 +49,14 @@ class AppSettings(BaseModel):
     LOG_DIR_CREATE: bool = True
     LOG_MAX_BYTE_WHEN_ROTATION: int = 100 * 1024 * 1024
     LOG_BACKUP_COUNT: int = 10
+
+    @property
+    def API_OPENAPI_URL(self) -> str:
+        return f"{self.API_PREFIX}/openapi.json"
+
+    @property
+    def API_DOCS_URL(self) -> str:
+        return f"{self.API_PREFIX}/docs"
 
     @property
     def LOG_DIR(self) -> Path:
