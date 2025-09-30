@@ -27,7 +27,10 @@ class AppSettings(BaseModel):
     API_WORKERS: int | None = None
     API_RELOAD: bool = False
 
-    API_CORS_ORIGINS: list[str] = ["http://localhost:3000"]
+    API_CORS_ORIGINS: list[str] = [
+        "http://localhost:3000",
+        "http://ec2-35-91-177-204.us-west-2.compute.amazonaws.com",
+    ]
     API_PREFIX: str = "/api"
 
     SCHEDULER_ENABLED: bool = True
