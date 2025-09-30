@@ -75,13 +75,14 @@ def setup_scheduler(app: FastAPIApplication) -> None:
     app.state.event_loop_tasks.append(asyncio.create_task(scheduler.run()))
 
 
-def setup_workers(app: FastAPIApplication):
+def setup_workers(app: FastAPIApplication) -> None:
     for idx in range(app.state.settings.POOLING_WORKERS_NUM):
         worker = DataPollingWorker(
             app.state.storage,
             app.state.queue,
             app.state.external,
             id=f"worker_{idx}",
+            polling_depth=app.state.settings.POLLING_DEPTH,
         )
         app.state.event_loop_tasks.append(asyncio.create_task(worker.run()))
         app.state.workers.append(worker)

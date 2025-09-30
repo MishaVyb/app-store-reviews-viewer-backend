@@ -9,6 +9,7 @@ from app.api.app import FastAPIApplication
 from app.services.queue import PollReviewsTask
 from tests.conftest import (
     TEST_APP_ID_INITIAL_1,
+    TEST_APP_ID_NO_REVIEWS,
     TEST_APP_ID_UNKNOWN,
     TEST_REVIEWS_COUNT,
 )
@@ -53,6 +54,15 @@ async def test_get_unknown_reviews(
 ) -> None:
     res = await client.get_reviews(TEST_APP_ID_UNKNOWN)
     assert len(res.items) == TEST_REVIEWS_COUNT
+
+
+async def test_get_reviews_pagination(
+    client: AppStoreReviewViewerAdapter, app: FastAPIApplication, mocker: MockerFixture
+) -> None:
+    spy = mocker.spy(app.state.external, "get_reviews")
+    res = await client.get_reviews(TEST_APP_ID_NO_REVIEWS)
+    assert not res.items
+    assert spy.call_count == 1
 
 
 async def test_get_reviews_race_condition(

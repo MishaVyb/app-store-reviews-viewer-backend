@@ -11,6 +11,7 @@ class ItunesRSSAdapter(HTTPAdapterBase):
     """HTTP Adapter for the third party Itunes RSS server."""
 
     _api_prefix = "/us/rss/customerreviews"
+    MAX_PAGES = 10
 
     async def get_reviews(
         self,
@@ -45,7 +46,7 @@ class ItunesRSSAdapter(HTTPAdapterBase):
         if sort_by:
             url += f"/sortBy={sort_by}"
         if page:
-            if page > 10:
+            if page > self.MAX_PAGES:
                 raise ValueError(
                     "Page number must be less than 10. External server limitation."
                 )

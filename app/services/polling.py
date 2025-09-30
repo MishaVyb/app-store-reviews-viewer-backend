@@ -1,5 +1,6 @@
 import asyncio
 import logging
+from datetime import datetime, timedelta, timezone
 from typing import Never
 
 from app.integration.itunes.adapter import ItunesRSSAdapter
@@ -20,11 +21,13 @@ class DataPollingWorker:
         adapter: ItunesRSSAdapter,
         *,
         id: str,
+        polling_depth: timedelta,
     ):
         self._storage = storage
         self._queue = queue
         self._adapter = adapter
         self._id = id
+        self._polling_depth = polling_depth
         self._is_available = asyncio.Event()
 
     @property
@@ -50,20 +53,28 @@ class DataPollingWorker:
     async def process(self, task: PollReviewsTask) -> None:
         logger.debug("%s; Processing task: %s", self, task)
 
-        response = await self._adapter.get_reviews(task.app_id)
         reviews = []
-        for entry in response.feed.entry:
-            review = schemas.Review(
-                # review id might be not unique among all apps, so build composed review id
-                id=f"{task.app_id}_{entry.id.label}",
-                app_id=task.app_id,
-                title=entry.title.label,
-                content=entry.content.label,
-                author=entry.author.label,
-                score=entry.im_rating.label,
-                updated=entry.updated.label,
-            )
-            reviews.append(review)
+        for page in range(1, self._adapter.MAX_PAGES + 1):
+            response = await self._adapter.get_reviews(task.app_id, page)
+            if not response.feed.entry:
+                break
+
+            for entry in response.feed.entry:
+                review = schemas.Review(
+                    # review id might be not unique among all apps, so build composed review id
+                    id=f"{task.app_id}_{entry.id.label}",
+                    app_id=task.app_id,
+                    title=entry.title.label,
+                    content=entry.content.label,
+                    author=entry.author.label,
+                    score=entry.im_rating.label,
+                    updated=entry.updated.label,
+                )
+                reviews.append(review)
+
+            now = datetime.now(timezone.utc)
+            if reviews[-1].updated < now - self._polling_depth:
+                break
 
         await self._storage.create_reviews(reviews)
 

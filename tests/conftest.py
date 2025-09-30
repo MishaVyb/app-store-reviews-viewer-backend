@@ -22,6 +22,7 @@ logger = logging.getLogger("conftest")
 TEST_APP_IDS_INITIAL = AppSettings.model_fields["STORAGE_INITIAL_APP_IDS"].default
 TEST_APP_ID_INITIAL_1 = TEST_APP_IDS_INITIAL[0]
 TEST_APP_ID_UNKNOWN = 389801252  # not in initial app ids list
+TEST_APP_ID_NO_REVIEWS = 1
 TEST_REVIEWS_COUNT = 50
 
 

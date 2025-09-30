@@ -1,3 +1,4 @@
+from datetime import timedelta
 from pathlib import Path
 from typing import Any, ClassVar, Literal
 
@@ -31,6 +32,7 @@ class AppSettings(BaseModel):
 
     SCHEDULER_ENABLED: bool = True
     POOLING_WORKERS_NUM: int = 10
+    POLLING_DEPTH: timedelta = timedelta(hours=48)
     STORAGE_PATH: Path = ROOT_DIR / "data" / "storage.json"
     STORAGE_INITIAL_APP_IDS: list[AppID] = [
         415458524,  # SkyScanner
