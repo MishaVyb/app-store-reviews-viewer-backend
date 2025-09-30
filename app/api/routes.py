@@ -1,4 +1,5 @@
 import logging
+from datetime import datetime
 from typing import TYPE_CHECKING
 
 from fastapi import APIRouter
@@ -27,7 +28,12 @@ async def get_apps(request: Request) -> schemas.GetAppsResponse:
 
 
 @reviews.get("/{app_id}")
-async def get_reviews(app_id: AppID, request: Request) -> schemas.GetReviewsResponse:
+async def get_reviews(
+    app_id: AppID,
+    request: Request,
+    *,
+    updated_min: datetime | None = None,
+) -> schemas.GetReviewsResponse:
     logger.info("Handle HTTP Request: %s %s", request.method, request.url)
 
     storage = request.app.state.storage
@@ -48,7 +54,7 @@ async def get_reviews(app_id: AppID, request: Request) -> schemas.GetReviewsResp
         app = schemas.App(id=app_id)
         await storage.create_app(app)
 
-    reviews = await storage.get_review_list(app_id)
+    reviews = await storage.get_review_list(app_id, updated_min=updated_min)
     return schemas.GetReviewsResponse(items=reviews)
 
 

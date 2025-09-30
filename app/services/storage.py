@@ -1,5 +1,6 @@
 import asyncio
 import logging
+from datetime import datetime
 from pathlib import Path
 
 from pydantic import BaseModel
@@ -45,13 +46,19 @@ class StorageService:
         logger.debug("Getting review: %s", review_id)
         return self._storage.reviews.get(review_id)
 
-    async def get_review_list(self, app_id: AppID) -> list[schemas.Review]:
+    async def get_review_list(
+        self, app_id: AppID, *, updated_min: datetime | None = None
+    ) -> list[schemas.Review]:
         logger.debug("Getting reviews for app: %s", app_id)
-        return [
-            review
-            for review in self._storage.reviews.values()
-            if review.app_id == app_id
-        ]
+        return sorted(
+            [
+                review
+                for review in self._storage.reviews.values()
+                if review.app_id == app_id
+                and (updated_min is None or review.updated >= updated_min)
+            ],
+            key=lambda x: x.updated,
+        )
 
     async def load(self) -> bool:
         if not self._path.exists() or self._path.read_text() == "":

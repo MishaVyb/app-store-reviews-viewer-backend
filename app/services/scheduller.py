@@ -16,7 +16,7 @@ class SchedulerService:
         queue: DataPollingQueue,
         storage: StorageService,
         workers: list[DataPollingWorker],
-        delay: float = 10.0,  # seconds
+        delay: float = 60.0,  # seconds
     ) -> None:
         self._queue = queue
         self._storage = storage

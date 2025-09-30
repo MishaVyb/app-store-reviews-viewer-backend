@@ -31,8 +31,8 @@ class AppSettings(BaseModel):
     API_PREFIX: str = "/api"
 
     SCHEDULER_ENABLED: bool = True
+    POLLING_REVIEWS_DEPTH: timedelta = timedelta(days=10)
     POOLING_WORKERS_NUM: int = 10
-    POLLING_DEPTH: timedelta = timedelta(hours=48)
     STORAGE_PATH: Path = ROOT_DIR / "data" / "storage.json"
     STORAGE_INITIAL_APP_IDS: list[AppID] = [
         415458524,  # SkyScanner

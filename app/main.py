@@ -82,7 +82,7 @@ def setup_workers(app: FastAPIApplication) -> None:
             app.state.queue,
             app.state.external,
             id=f"worker_{idx}",
-            polling_depth=app.state.settings.POLLING_DEPTH,
+            polling_depth=app.state.settings.POLLING_REVIEWS_DEPTH,
         )
         app.state.event_loop_tasks.append(asyncio.create_task(worker.run()))
         app.state.workers.append(worker)

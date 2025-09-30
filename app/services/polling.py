@@ -66,7 +66,7 @@ class DataPollingWorker:
                     app_id=task.app_id,
                     title=entry.title.label,
                     content=entry.content.label,
-                    author=entry.author.label,
+                    author=entry.author.name.label,
                     score=entry.im_rating.label,
                     updated=entry.updated.label,
                 )
