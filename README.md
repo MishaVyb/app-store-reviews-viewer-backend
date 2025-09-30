@@ -10,6 +10,8 @@ A FastAPI backend service for fetching and serving iOS App Store reviews data.
 ![](https://img.shields.io/badge/python-3.13-blue)
 ![](https://img.shields.io/badge/fastapi-0.116.1-blue)
 
+<img width="4079" height="1257" alt="Untitled scene" src="https://github.com/user-attachments/assets/0385fffd-2962-4105-a95a-a11c090b494c" />
+
 ## Quick Start
 
 ```bash
