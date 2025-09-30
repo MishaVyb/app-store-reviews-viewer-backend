@@ -208,3 +208,5 @@ __marimo__/
 
 .vscode/
 *___*
+data/storage.json
+logs/
