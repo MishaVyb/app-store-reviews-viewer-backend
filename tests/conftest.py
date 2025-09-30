@@ -2,6 +2,7 @@ import asyncio
 import json
 import logging
 import re
+from pathlib import Path
 from typing import AsyncGenerator, Literal
 
 import httpx
@@ -30,8 +31,12 @@ def anyio_backend() -> Literal["asyncio"]:
 
 
 @pytest.fixture
-def settings_overrides() -> AppSettings | None:
-    return AppSettings(SCHEDULER_ENABLED=False)
+def settings_overrides(tmp_path: Path) -> AppSettings | None:
+    return AppSettings(
+        SCHEDULER_ENABLED=False,
+        STORAGE_PATH=tmp_path / "storage.json",
+        LOG_DIR=tmp_path / "logs",
+    )
 
 
 @pytest.fixture

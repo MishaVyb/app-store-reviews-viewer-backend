@@ -1,8 +1,6 @@
 import asyncio
 import logging
-from datetime import timedelta
 
-from app.services import schemas
 from app.services.polling import DataPollingWorker
 from app.services.queue import DataPollingQueue
 from app.services.storage import StorageService

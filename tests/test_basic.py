@@ -6,20 +6,18 @@ from pytest_mock import MockerFixture
 
 from app.api.adapter import AppStoreReviewViewerAdapter
 from app.api.app import FastAPIApplication
-from app.config import AppSettings
 from app.services.queue import PollReviewsTask
-from tests.conftest import TEST_APP_ID_INITIAL_1, TEST_APP_ID_UNKNOWN, TEST_REVIEWS_COUNT
+from tests.conftest import (
+    TEST_APP_ID_INITIAL_1,
+    TEST_APP_ID_UNKNOWN,
+    TEST_REVIEWS_COUNT,
+)
 
 logger = logging.getLogger("conftest")
 
 pytestmark = [
     pytest.mark.usefixtures("mock_external_http_requests"),
 ]
-
-
-@pytest.fixture
-def settings_overrides() -> AppSettings | None:
-    return AppSettings(SCHEDULER_ENABLED=False)
 
 
 async def test_get_apps(

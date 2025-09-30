@@ -41,7 +41,6 @@ async def lifespan(app: FastAPIApplication):
     app.state.queue = DataPollingQueue()
 
     try:
-        # TODO run SchedulerService who schedule tasks to workers in background
         app.state.storage = await setup_storage(app)
 
         async with httpx.AsyncClient(
@@ -61,6 +60,7 @@ async def lifespan(app: FastAPIApplication):
 
 async def setup_storage(app: FastAPIApplication) -> StorageService:
     storage = StorageService(app.state.settings.STORAGE_PATH)
+    await storage.load()
     for app_id in app.state.settings.STORAGE_INITIAL_APP_IDS:
         await storage.create_app(schemas.App(id=app_id))
     return storage

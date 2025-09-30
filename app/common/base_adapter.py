@@ -6,7 +6,6 @@ import httpx
 from fastapi import HTTPException, status
 from pydantic import BaseModel, TypeAdapter
 
-
 _T = TypeVar("_T")
 _TSchema = TypeVar("_TSchema", bound=BaseModel)
 _TYPE_ADAPTERS: dict[type, TypeAdapter[Any]] = {}

@@ -1,5 +1,5 @@
 from pathlib import Path
-from typing import Any, Literal
+from typing import Any, ClassVar, Literal
 
 from pydantic import BaseModel, ConfigDict
 
@@ -14,7 +14,7 @@ class AppSettings(BaseModel):
         frozen=True,
     )
 
-    ROOT_DIR: Path = Path(__file__).resolve().parent.parent
+    ROOT_DIR: ClassVar[Path] = Path(__file__).resolve().parent.parent
 
     APP_ENVIRONMENT: Literal["dev", "staging", "production"] = "dev"
     APP_NAME: str = "App Store Reviews Viewer"
@@ -31,6 +31,7 @@ class AppSettings(BaseModel):
 
     SCHEDULER_ENABLED: bool = True
     POOLING_WORKERS_NUM: int = 10
+    STORAGE_PATH: Path = ROOT_DIR / "data" / "storage.json"
     STORAGE_INITIAL_APP_IDS: list[AppID] = [
         415458524,  # SkyScanner
         595068606,  # Tab
@@ -45,15 +46,12 @@ class AppSettings(BaseModel):
     LOG_LEVEL_HTTPX: str = "DEBUG"
     LOG_HANDLERS: list[str] = ["console", "file"]
 
+    LOG_DIR: Path = ROOT_DIR / "logs"
     LOG_FILE: str = "app_store_reviews_viewer.log"
     LOG_JSON_FILE: str = "app_store_reviews_viewer.json"
     LOG_DIR_CREATE: bool = True
     LOG_MAX_BYTE_WHEN_ROTATION: int = 100 * 1024 * 1024
     LOG_BACKUP_COUNT: int = 10
-
-    @property
-    def STORAGE_PATH(self) -> Path:
-        return self.ROOT_DIR / "data" / "storage.json"
 
     @property
     def API_OPENAPI_URL(self) -> str:
@@ -62,10 +60,6 @@ class AppSettings(BaseModel):
     @property
     def API_DOCS_URL(self) -> str:
         return f"{self.API_PREFIX}/docs"
-
-    @property
-    def LOG_DIR(self) -> Path:
-        return self.ROOT_DIR / "log"
 
     @property
     def LOGGING(self) -> dict[str, Any]:
