@@ -21,7 +21,7 @@ class AppSettings(BaseModel):
     APP_DESCRIPTION: str = "App Store Reviews Viewer API"
     APP_VERSION: str = "1.0.0.0"
 
-    API_PORT: int = 8000
+    API_PORT: int = 8080
     API_HOST: str = "0.0.0.0"
     API_WORKERS: int | None = None
     API_RELOAD: bool = False
@@ -29,6 +29,7 @@ class AppSettings(BaseModel):
     API_CORS_ORIGINS: list[str] = ["http://localhost:3000"]
     API_PREFIX: str = "/api"
 
+    SCHEDULER_ENABLED: bool = True
     POOLING_WORKERS_NUM: int = 10
     STORAGE_INITIAL_APP_IDS: list[AppID] = [
         415458524,  # SkyScanner

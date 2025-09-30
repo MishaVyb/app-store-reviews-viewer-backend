@@ -1,0 +1,2568 @@
+{
+    "feed": {
+        "author": {
+            "name": {
+                "label": "iTunes Store"
+            },
+            "uri": {
+                "label": "http://www.apple.com/itunes/"
+            }
+        },
+        "entry": [
+            {
+                "author": {
+                    "uri": {
+                        "label": "https://itunes.apple.com/us/reviews/id104303730"
+                    },
+                    "name": {
+                        "label": "Esternpoint"
+                    },
+                    "label": ""
+                },
+                "updated": {
+                    "label": "2025-09-17T11:50:04-07:00"
+                },
+                "im:rating": {
+                    "label": "3"
+                },
+                "im:version": {
+                    "label": "4.33.1"
+                },
+                "id": {
+                    "label": "13149682611"
+                },
+                "title": {
+                    "label": "Cannot use app"
+                },
+                "content": {
+                    "label": "Lately, I am unable to use the app on my iPhone 15 (app version 4.33.1 running on iOS 26). A message comes up advising that a secure  connection cannot be established, because the site does not support https. If I, nevertheless, select “continue,” another message pops up informing me that the connection to the server has been lost (?)—even if it was never really established.\n\nI have not experienced any problems before  now , and the app works fine on my iPad. Any ideas? Possible fixes?\n\nIf I delete the app and reinstall it, the issue persists. Would it be possible for Apple to wipe the app completely from my account, so that I could reinstall a workable copy?",
+                    "attributes": {
+                        "type": "text"
+                    }
+                },
+                "link": {
+                    "attributes": {
+                        "rel": "related",
+                        "href": "https://itunes.apple.com/us/review?id=640437525&type=Purple%20Software"
+                    }
+                },
+                "im:voteSum": {
+                    "label": "0"
+                },
+                "im:contentType": {
+                    "attributes": {
+                        "term": "Application",
+                        "label": "Application"
+                    }
+                },
+                "im:voteCount": {
+                    "label": "0"
+                }
+            },
+            {
+                "author": {
+                    "uri": {
+                        "label": "https://itunes.apple.com/us/reviews/id40828745"
+                    },
+                    "name": {
+                        "label": "Ampereo"
+                    },
+                    "label": ""
+                },
+                "updated": {
+                    "label": "2025-08-04T02:22:05-07:00"
+                },
+                "im:rating": {
+                    "label": "1"
+                },
+                "im:version": {
+                    "label": "4.31.0"
+                },
+                "id": {
+                    "label": "12974166923"
+                },
+                "title": {
+                    "label": "Cannot create account"
+                },
+                "content": {
+                    "label": "You currently cannot create an account on the app. It appears to be a poor wrapper around a website. The bottom half of the screen seems to be blocked by some invisible view or the touch area of the website they’re showing is only on the top half the screen. When creating an account I could get around this because everything was scrollable, but on the final confirm details page, it is not scrollable so the Confirm Details button is not selectable. I thought I was being clever and turned on VoiceOver to scroll selection down to the button to double tap but alas that didn’t work. I might create an account on their actual website and come back to see if the rest of the app is usable or I could be passive-aggressive and petty and just give up to spite Qantas. 😊",
+                    "attributes": {
+                        "type": "text"
+                    }
+                },
+                "link": {
+                    "attributes": {
+                        "rel": "related",
+                        "href": "https://itunes.apple.com/us/review?id=640437525&type=Purple%20Software"
+                    }
+                },
+                "im:voteSum": {
+                    "label": "0"
+                },
+                "im:contentType": {
+                    "attributes": {
+                        "term": "Application",
+                        "label": "Application"
+                    }
+                },
+                "im:voteCount": {
+                    "label": "0"
+                }
+            },
+            {
+                "author": {
+                    "uri": {
+                        "label": "https://itunes.apple.com/us/reviews/id397570256"
+                    },
+                    "name": {
+                        "label": "Ronny6444"
+                    },
+                    "label": ""
+                },
+                "updated": {
+                    "label": "2025-07-17T17:07:25-07:00"
+                },
+                "im:rating": {
+                    "label": "1"
+                },
+                "im:version": {
+                    "label": "4.29.0"
+                },
+                "id": {
+                    "label": "12904566078"
+                },
+                "title": {
+                    "label": "Pathetic slow app"
+                },
+                "content": {
+                    "label": "Imagine being on account opening forms and none of the buttons work unless u keep tapping on them multiple times and have to zoom and rezoom for the screen buttons to respond. I am still not able to sign for this app account😓terrible whoever is the lead developer on this.",
+                    "attributes": {
+                        "type": "text"
+                    }
+                },
+                "link": {
+                    "attributes": {
+                        "rel": "related",
+                        "href": "https://itunes.apple.com/us/review?id=640437525&type=Purple%20Software"
+                    }
+                },
+                "im:voteSum": {
+                    "label": "0"
+                },
+                "im:contentType": {
+                    "attributes": {
+                        "term": "Application",
+                        "label": "Application"
+                    }
+                },
+                "im:voteCount": {
+                    "label": "0"
+                }
+            },
+            {
+                "author": {
+                    "uri": {
+                        "label": "https://itunes.apple.com/us/reviews/id1448509798"
+                    },
+                    "name": {
+                        "label": "bulldiser"
+                    },
+                    "label": ""
+                },
+                "updated": {
+                    "label": "2025-06-27T20:50:48-07:00"
+                },
+                "im:rating": {
+                    "label": "3"
+                },
+                "im:version": {
+                    "label": "4.28.0"
+                },
+                "id": {
+                    "label": "12825892770"
+                },
+                "title": {
+                    "label": "Horrible"
+                },
+                "content": {
+                    "label": "Horrible customer service. Received a flight credit that could only be used by calling in. Called in, was on hold forever, just to be told it was still processing. Probably won’t get to use my flight credit because my travel is ending soon. Money stolen. 😡",
+                    "attributes": {
+                        "type": "text"
+                    }
+                },
+                "link": {
+                    "attributes": {
+                        "rel": "related",
+                        "href": "https://itunes.apple.com/us/review?id=640437525&type=Purple%20Software"
+                    }
+                },
+                "im:voteSum": {
+                    "label": "0"
+                },
+                "im:contentType": {
+                    "attributes": {
+                        "term": "Application",
+                        "label": "Application"
+                    }
+                },
+                "im:voteCount": {
+                    "label": "0"
+                }
+            },
+            {
+                "author": {
+                    "uri": {
+                        "label": "https://itunes.apple.com/us/reviews/id529379351"
+                    },
+                    "name": {
+                        "label": "Emil9292"
+                    },
+                    "label": ""
+                },
+                "updated": {
+                    "label": "2025-06-27T12:08:36-07:00"
+                },
+                "im:rating": {
+                    "label": "1"
+                },
+                "im:version": {
+                    "label": "4.28.0"
+                },
+                "id": {
+                    "label": "12824550769"
+                },
+                "title": {
+                    "label": "Horrible"
+                },
+                "content": {
+                    "label": "Lovely airline and 380 aircrafts but the app is trash",
+                    "attributes": {
+                        "type": "text"
+                    }
+                },
+                "link": {
+                    "attributes": {
+                        "rel": "related",
+                        "href": "https://itunes.apple.com/us/review?id=640437525&type=Purple%20Software"
+                    }
+                },
+                "im:voteSum": {
+                    "label": "0"
+                },
+                "im:contentType": {
+                    "attributes": {
+                        "term": "Application",
+                        "label": "Application"
+                    }
+                },
+                "im:voteCount": {
+                    "label": "0"
+                }
+            },
+            {
+                "author": {
+                    "uri": {
+                        "label": "https://itunes.apple.com/us/reviews/id171519759"
+                    },
+                    "name": {
+                        "label": "AsosBershka"
+                    },
+                    "label": ""
+                },
+                "updated": {
+                    "label": "2025-03-09T07:35:19-07:00"
+                },
+                "im:rating": {
+                    "label": "1"
+                },
+                "im:version": {
+                    "label": "4.23.0"
+                },
+                "id": {
+                    "label": "12400722397"
+                },
+                "title": {
+                    "label": "Worst Airline App"
+                },
+                "content": {
+                    "label": "Now most Airline Apps are not buttery smooth or even ideal/stable but this App is the worst, the app seems to be structured like a layered Browser, and also seems to be semi-permable and when I was trying to read the terms, the tap function seems to have ended up making a booking without my knowledge forcing me to have to dispute the charges with my card company. In addition, the desktop functionality freezes even in high performance smartphones, I definitely suggest avoid using this app and use Safari or another browser alternatively until they can have a more functioning app like competition globally.",
+                    "attributes": {
+                        "type": "text"
+                    }
+                },
+                "link": {
+                    "attributes": {
+                        "rel": "related",
+                        "href": "https://itunes.apple.com/us/review?id=640437525&type=Purple%20Software"
+                    }
+                },
+                "im:voteSum": {
+                    "label": "0"
+                },
+                "im:contentType": {
+                    "attributes": {
+                        "term": "Application",
+                        "label": "Application"
+                    }
+                },
+                "im:voteCount": {
+                    "label": "1"
+                }
+            },
+            {
+                "author": {
+                    "uri": {
+                        "label": "https://itunes.apple.com/us/reviews/id180312248"
+                    },
+                    "name": {
+                        "label": "adrianmesko"
+                    },
+                    "label": ""
+                },
+                "updated": {
+                    "label": "2025-02-02T22:21:49-07:00"
+                },
+                "im:rating": {
+                    "label": "1"
+                },
+                "im:version": {
+                    "label": "4.21.0"
+                },
+                "id": {
+                    "label": "12264539858"
+                },
+                "title": {
+                    "label": "Pathetic cumbersome full of bugs"
+                },
+                "content": {
+                    "label": "Such an embarrassment for the national airline with such a monopoly and great marketing. What a calamity of an app",
+                    "attributes": {
+                        "type": "text"
+                    }
+                },
+                "link": {
+                    "attributes": {
+                        "rel": "related",
+                        "href": "https://itunes.apple.com/us/review?id=640437525&type=Purple%20Software"
+                    }
+                },
+                "im:voteSum": {
+                    "label": "0"
+                },
+                "im:contentType": {
+                    "attributes": {
+                        "term": "Application",
+                        "label": "Application"
+                    }
+                },
+                "im:voteCount": {
+                    "label": "0"
+                }
+            },
+            {
+                "author": {
+                    "uri": {
+                        "label": "https://itunes.apple.com/us/reviews/id1520254241"
+                    },
+                    "name": {
+                        "label": "Sam159&201"
+                    },
+                    "label": ""
+                },
+                "updated": {
+                    "label": "2024-12-02T04:04:32-07:00"
+                },
+                "im:rating": {
+                    "label": "1"
+                },
+                "im:version": {
+                    "label": "4.18.0"
+                },
+                "id": {
+                    "label": "12016888118"
+                },
+                "title": {
+                    "label": "Stingy on drinks and poor boarding experience"
+                },
+                "content": {
+                    "label": "Air New Zealand goes up and down Isle 2-3 times with drinks non alcoholic and alcoholic beverages, Qantas offers you one stingy drink and never comes back! Not impressed!  They also had some random Indian lady jump on me during boarding claiming she worked for USA homeland security and wanting to put a silly sticker in my passport - I didn’t believe her or trust her, I told this complete stranger coming at me way back in line I we went through international security in Brisbane just like everyone else and completely ignored her.  Then I was selected for a “Random!” Security screening later on totally unprofessional.",
+                    "attributes": {
+                        "type": "text"
+                    }
+                },
+                "link": {
+                    "attributes": {
+                        "rel": "related",
+                        "href": "https://itunes.apple.com/us/review?id=640437525&type=Purple%20Software"
+                    }
+                },
+                "im:voteSum": {
+                    "label": "0"
+                },
+                "im:contentType": {
+                    "attributes": {
+                        "term": "Application",
+                        "label": "Application"
+                    }
+                },
+                "im:voteCount": {
+                    "label": "1"
+                }
+            },
+            {
+                "author": {
+                    "uri": {
+                        "label": "https://itunes.apple.com/us/reviews/id215740058"
+                    },
+                    "name": {
+                        "label": "AdamPro13"
+                    },
+                    "label": ""
+                },
+                "updated": {
+                    "label": "2024-11-11T19:09:19-07:00"
+                },
+                "im:rating": {
+                    "label": "3"
+                },
+                "im:version": {
+                    "label": "4.18.0"
+                },
+                "id": {
+                    "label": "11940175387"
+                },
+                "title": {
+                    "label": "No ability to add to calendar"
+                },
+                "content": {
+                    "label": "It’s 2024 and there’s still no way to add a flight to your calendar from the app. This is so painful as an American booking flights in Australia.",
+                    "attributes": {
+                        "type": "text"
+                    }
+                },
+                "link": {
+                    "attributes": {
+                        "rel": "related",
+                        "href": "https://itunes.apple.com/us/review?id=640437525&type=Purple%20Software"
+                    }
+                },
+                "im:voteSum": {
+                    "label": "0"
+                },
+                "im:contentType": {
+                    "attributes": {
+                        "term": "Application",
+                        "label": "Application"
+                    }
+                },
+                "im:voteCount": {
+                    "label": "0"
+                }
+            },
+            {
+                "author": {
+                    "uri": {
+                        "label": "https://itunes.apple.com/us/reviews/id341303826"
+                    },
+                    "name": {
+                        "label": "Neptune586"
+                    },
+                    "label": ""
+                },
+                "updated": {
+                    "label": "2024-09-11T21:57:05-07:00"
+                },
+                "im:rating": {
+                    "label": "1"
+                },
+                "im:version": {
+                    "label": "4.14.0"
+                },
+                "id": {
+                    "label": "11714949383"
+                },
+                "title": {
+                    "label": "Impossible to log in"
+                },
+                "content": {
+                    "label": "It’s taking me through a cycle of verifications but not giving me options to enter the code it’s sending me. It sends the code too late and then times out.",
+                    "attributes": {
+                        "type": "text"
+                    }
+                },
+                "link": {
+                    "attributes": {
+                        "rel": "related",
+                        "href": "https://itunes.apple.com/us/review?id=640437525&type=Purple%20Software"
+                    }
+                },
+                "im:voteSum": {
+                    "label": "0"
+                },
+                "im:contentType": {
+                    "attributes": {
+                        "term": "Application",
+                        "label": "Application"
+                    }
+                },
+                "im:voteCount": {
+                    "label": "0"
+                }
+            },
+            {
+                "author": {
+                    "uri": {
+                        "label": "https://itunes.apple.com/us/reviews/id178393973"
+                    },
+                    "name": {
+                        "label": "icheath"
+                    },
+                    "label": ""
+                },
+                "updated": {
+                    "label": "2024-07-23T13:20:21-07:00"
+                },
+                "im:rating": {
+                    "label": "4"
+                },
+                "im:version": {
+                    "label": "4.11.0"
+                },
+                "id": {
+                    "label": "11526909519"
+                },
+                "title": {
+                    "label": "Doesn’t accept TSA Precheck number"
+                },
+                "content": {
+                    "label": "When entering traveller details for an existing booking, there is a Known Traveler Number field. The app will only accept a 9 digit value. However, USA TSA Precheck numbers are a combination of letters and numbers. Always have to use the airport checkin desk to get them to enter it for me, which is a pain.",
+                    "attributes": {
+                        "type": "text"
+                    }
+                },
+                "link": {
+                    "attributes": {
+                        "rel": "related",
+                        "href": "https://itunes.apple.com/us/review?id=640437525&type=Purple%20Software"
+                    }
+                },
+                "im:voteSum": {
+                    "label": "0"
+                },
+                "im:contentType": {
+                    "attributes": {
+                        "term": "Application",
+                        "label": "Application"
+                    }
+                },
+                "im:voteCount": {
+                    "label": "0"
+                }
+            },
+            {
+                "author": {
+                    "uri": {
+                        "label": "https://itunes.apple.com/us/reviews/id1659733524"
+                    },
+                    "name": {
+                        "label": "Mile25yes"
+                    },
+                    "label": ""
+                },
+                "updated": {
+                    "label": "2024-05-23T06:51:18-07:00"
+                },
+                "im:rating": {
+                    "label": "1"
+                },
+                "im:version": {
+                    "label": "4.9.1"
+                },
+                "id": {
+                    "label": "11298230592"
+                },
+                "title": {
+                    "label": "App does not work"
+                },
+                "content": {
+                    "label": "You can’t access fares or schedules to book flights. I’ve updated the app, updated my IPhone and still won’t work. There’s been numerous complaints online about this. It’s hard to imagine that QANTAS hasn’t fixed this issue as people can’t book flights.",
+                    "attributes": {
+                        "type": "text"
+                    }
+                },
+                "link": {
+                    "attributes": {
+                        "rel": "related",
+                        "href": "https://itunes.apple.com/us/review?id=640437525&type=Purple%20Software"
+                    }
+                },
+                "im:voteSum": {
+                    "label": "0"
+                },
+                "im:contentType": {
+                    "attributes": {
+                        "term": "Application",
+                        "label": "Application"
+                    }
+                },
+                "im:voteCount": {
+                    "label": "0"
+                }
+            },
+            {
+                "author": {
+                    "uri": {
+                        "label": "https://itunes.apple.com/us/reviews/id37087449"
+                    },
+                    "name": {
+                        "label": "KillBillwithNIN"
+                    },
+                    "label": ""
+                },
+                "updated": {
+                    "label": "2024-05-16T04:24:26-07:00"
+                },
+                "im:rating": {
+                    "label": "1"
+                },
+                "im:version": {
+                    "label": "4.9.0"
+                },
+                "id": {
+                    "label": "11273031926"
+                },
+                "title": {
+                    "label": "Broken app, broken website"
+                },
+                "content": {
+                    "label": "Qantas has real problems when the app and the website yield a never ending loading widget. Back end is busted for days.",
+                    "attributes": {
+                        "type": "text"
+                    }
+                },
+                "link": {
+                    "attributes": {
+                        "rel": "related",
+                        "href": "https://itunes.apple.com/us/review?id=640437525&type=Purple%20Software"
+                    }
+                },
+                "im:voteSum": {
+                    "label": "0"
+                },
+                "im:contentType": {
+                    "attributes": {
+                        "term": "Application",
+                        "label": "Application"
+                    }
+                },
+                "im:voteCount": {
+                    "label": "0"
+                }
+            },
+            {
+                "author": {
+                    "uri": {
+                        "label": "https://itunes.apple.com/us/reviews/id11679350"
+                    },
+                    "name": {
+                        "label": "hyperjetlag"
+                    },
+                    "label": ""
+                },
+                "updated": {
+                    "label": "2024-04-30T20:23:41-07:00"
+                },
+                "im:rating": {
+                    "label": "1"
+                },
+                "im:version": {
+                    "label": "4.8.1"
+                },
+                "id": {
+                    "label": "11218827430"
+                },
+                "title": {
+                    "label": "Generally a bad online experience"
+                },
+                "content": {
+                    "label": "The app sends you to a faux browser when you need to actually do something instead of actually functioning as a self contained app such as those other airlines have \n\nOften denies that routes exist which Qantas actually flies (ie Melbourne - NYC) and the prices are ALWAYS always higher  than can be found on other sites. You can’t fly to a city - you have to choose a specific airport. But like in London, NYC or others - multiple airports exist and every other site allows for searches to the city. \n\nBad app, more generally out of date online setup.",
+                    "attributes": {
+                        "type": "text"
+                    }
+                },
+                "link": {
+                    "attributes": {
+                        "rel": "related",
+                        "href": "https://itunes.apple.com/us/review?id=640437525&type=Purple%20Software"
+                    }
+                },
+                "im:voteSum": {
+                    "label": "1"
+                },
+                "im:contentType": {
+                    "attributes": {
+                        "term": "Application",
+                        "label": "Application"
+                    }
+                },
+                "im:voteCount": {
+                    "label": "1"
+                }
+            },
+            {
+                "author": {
+                    "uri": {
+                        "label": "https://itunes.apple.com/us/reviews/id6778430"
+                    },
+                    "name": {
+                        "label": "Jdhebdurnej"
+                    },
+                    "label": ""
+                },
+                "updated": {
+                    "label": "2024-04-22T00:43:12-07:00"
+                },
+                "im:rating": {
+                    "label": "1"
+                },
+                "im:version": {
+                    "label": "4.8.1"
+                },
+                "id": {
+                    "label": "11187469932"
+                },
+                "title": {
+                    "label": "Not working"
+                },
+                "content": {
+                    "label": "Unable to book flights through the app after the update. Pathetic.",
+                    "attributes": {
+                        "type": "text"
+                    }
+                },
+                "link": {
+                    "attributes": {
+                        "rel": "related",
+                        "href": "https://itunes.apple.com/us/review?id=640437525&type=Purple%20Software"
+                    }
+                },
+                "im:voteSum": {
+                    "label": "0"
+                },
+                "im:contentType": {
+                    "attributes": {
+                        "term": "Application",
+                        "label": "Application"
+                    }
+                },
+                "im:voteCount": {
+                    "label": "0"
+                }
+            },
+            {
+                "author": {
+                    "uri": {
+                        "label": "https://itunes.apple.com/us/reviews/id38852388"
+                    },
+                    "name": {
+                        "label": "straea"
+                    },
+                    "label": ""
+                },
+                "updated": {
+                    "label": "2024-04-19T14:53:33-07:00"
+                },
+                "im:rating": {
+                    "label": "2"
+                },
+                "im:version": {
+                    "label": "4.8.1"
+                },
+                "id": {
+                    "label": "11178459562"
+                },
+                "title": {
+                    "label": "Very basic"
+                },
+                "content": {
+                    "label": "This app allowed me to do online check-in, however they still printed a boarding pass at the Qantas in-person bag drop so I didn’t see the point. Then my flight was delayed repeatedly and the app never sent me a single notification about it; I only found out through checking the airport Departures board. Since I had downloaded the app I also added a Qantas flight that I had already booked through their partnership with Emirates as part of a different multi-flight trip, but the code from Emirates wouldn’t allow me to pick a seat and order a special meal in the app. To do those things I had to go to the Qantas website, where I was able to easily use the same code to do them.",
+                    "attributes": {
+                        "type": "text"
+                    }
+                },
+                "link": {
+                    "attributes": {
+                        "rel": "related",
+                        "href": "https://itunes.apple.com/us/review?id=640437525&type=Purple%20Software"
+                    }
+                },
+                "im:voteSum": {
+                    "label": "0"
+                },
+                "im:contentType": {
+                    "attributes": {
+                        "term": "Application",
+                        "label": "Application"
+                    }
+                },
+                "im:voteCount": {
+                    "label": "0"
+                }
+            },
+            {
+                "author": {
+                    "uri": {
+                        "label": "https://itunes.apple.com/us/reviews/id1122428476"
+                    },
+                    "name": {
+                        "label": "security expert 2020"
+                    },
+                    "label": ""
+                },
+                "updated": {
+                    "label": "2024-04-15T16:51:58-07:00"
+                },
+                "im:rating": {
+                    "label": "1"
+                },
+                "im:version": {
+                    "label": "4.8.1"
+                },
+                "id": {
+                    "label": "11163187155"
+                },
+                "title": {
+                    "label": "Web browser in an App"
+                },
+                "content": {
+                    "label": "Searching reward redemptions is tedious.\n\nUnclear how this is rated so highly. Half of the written reviews are negative.",
+                    "attributes": {
+                        "type": "text"
+                    }
+                },
+                "link": {
+                    "attributes": {
+                        "rel": "related",
+                        "href": "https://itunes.apple.com/us/review?id=640437525&type=Purple%20Software"
+                    }
+                },
+                "im:voteSum": {
+                    "label": "0"
+                },
+                "im:contentType": {
+                    "attributes": {
+                        "term": "Application",
+                        "label": "Application"
+                    }
+                },
+                "im:voteCount": {
+                    "label": "0"
+                }
+            },
+            {
+                "author": {
+                    "uri": {
+                        "label": "https://itunes.apple.com/us/reviews/id1631748695"
+                    },
+                    "name": {
+                        "label": "J5o6a2s7h4"
+                    },
+                    "label": ""
+                },
+                "updated": {
+                    "label": "2024-03-20T19:29:02-07:00"
+                },
+                "im:rating": {
+                    "label": "1"
+                },
+                "im:version": {
+                    "label": "4.7.0"
+                },
+                "id": {
+                    "label": "11067354250"
+                },
+                "title": {
+                    "label": "about points"
+                },
+                "content": {
+                    "label": "At first, I asked that I could accumulate the points of the passengers traveling with me to my account, but then the customer service said no, which was a bit funny. I wouldn't choose Qantas again.",
+                    "attributes": {
+                        "type": "text"
+                    }
+                },
+                "link": {
+                    "attributes": {
+                        "rel": "related",
+                        "href": "https://itunes.apple.com/us/review?id=640437525&type=Purple%20Software"
+                    }
+                },
+                "im:voteSum": {
+                    "label": "0"
+                },
+                "im:contentType": {
+                    "attributes": {
+                        "term": "Application",
+                        "label": "Application"
+                    }
+                },
+                "im:voteCount": {
+                    "label": "0"
+                }
+            },
+            {
+                "author": {
+                    "uri": {
+                        "label": "https://itunes.apple.com/us/reviews/id1301359643"
+                    },
+                    "name": {
+                        "label": "polisau"
+                    },
+                    "label": ""
+                },
+                "updated": {
+                    "label": "2023-12-17T12:24:47-07:00"
+                },
+                "im:rating": {
+                    "label": "3"
+                },
+                "im:version": {
+                    "label": "4.3.1"
+                },
+                "id": {
+                    "label": "10709099678"
+                },
+                "title": {
+                    "label": "Glitchy App"
+                },
+                "content": {
+                    "label": "Boarding pass disappeared from the app whilst I was travelling overseas. Highly inconvenient bug considering the cost of the flights. Do better.",
+                    "attributes": {
+                        "type": "text"
+                    }
+                },
+                "link": {
+                    "attributes": {
+                        "rel": "related",
+                        "href": "https://itunes.apple.com/us/review?id=640437525&type=Purple%20Software"
+                    }
+                },
+                "im:voteSum": {
+                    "label": "0"
+                },
+                "im:contentType": {
+                    "attributes": {
+                        "term": "Application",
+                        "label": "Application"
+                    }
+                },
+                "im:voteCount": {
+                    "label": "0"
+                }
+            },
+            {
+                "author": {
+                    "uri": {
+                        "label": "https://itunes.apple.com/us/reviews/id109989203"
+                    },
+                    "name": {
+                        "label": "noappleno"
+                    },
+                    "label": ""
+                },
+                "updated": {
+                    "label": "2023-07-19T18:42:58-07:00"
+                },
+                "im:rating": {
+                    "label": "1"
+                },
+                "im:version": {
+                    "label": "3.104.0"
+                },
+                "id": {
+                    "label": "10159634598"
+                },
+                "title": {
+                    "label": "Awful non native experience"
+                },
+                "content": {
+                    "label": "Lol. An app that basically puts a web browser frame inside the app is probably the cheapest, nastiest experience you can deliver to a customer. Booking within the app is a tedious experience because of it. Awful. And this is the gold standard of Australian airlines.",
+                    "attributes": {
+                        "type": "text"
+                    }
+                },
+                "link": {
+                    "attributes": {
+                        "rel": "related",
+                        "href": "https://itunes.apple.com/us/review?id=640437525&type=Purple%20Software"
+                    }
+                },
+                "im:voteSum": {
+                    "label": "0"
+                },
+                "im:contentType": {
+                    "attributes": {
+                        "term": "Application",
+                        "label": "Application"
+                    }
+                },
+                "im:voteCount": {
+                    "label": "0"
+                }
+            },
+            {
+                "author": {
+                    "uri": {
+                        "label": "https://itunes.apple.com/us/reviews/id677264214"
+                    },
+                    "name": {
+                        "label": "NEGuardsman"
+                    },
+                    "label": ""
+                },
+                "updated": {
+                    "label": "2023-06-02T04:55:12-07:00"
+                },
+                "im:rating": {
+                    "label": "1"
+                },
+                "im:version": {
+                    "label": "3.101.0"
+                },
+                "id": {
+                    "label": "9990968915"
+                },
+                "title": {
+                    "label": "Unreasonably low baggage requirements"
+                },
+                "content": {
+                    "label": "Traveled to 30+ countries on 20 airlines with international travel luggage and Qantas made us check our bags 19lbs backpacks for being “too heavy”. Honestly, on of the most ridiculous restrictions I’ve seen.  Won’t be flying with them unless I have no other option.",
+                    "attributes": {
+                        "type": "text"
+                    }
+                },
+                "link": {
+                    "attributes": {
+                        "rel": "related",
+                        "href": "https://itunes.apple.com/us/review?id=640437525&type=Purple%20Software"
+                    }
+                },
+                "im:voteSum": {
+                    "label": "0"
+                },
+                "im:contentType": {
+                    "attributes": {
+                        "term": "Application",
+                        "label": "Application"
+                    }
+                },
+                "im:voteCount": {
+                    "label": "0"
+                }
+            },
+            {
+                "author": {
+                    "uri": {
+                        "label": "https://itunes.apple.com/us/reviews/id49453085"
+                    },
+                    "name": {
+                        "label": "ExNeddiesBoy"
+                    },
+                    "label": ""
+                },
+                "updated": {
+                    "label": "2023-05-14T00:19:40-07:00"
+                },
+                "im:rating": {
+                    "label": "4"
+                },
+                "im:version": {
+                    "label": "3.99.0"
+                },
+                "id": {
+                    "label": "9925160707"
+                },
+                "title": {
+                    "label": "In-App App feedback"
+                },
+                "content": {
+                    "label": "Within the App, the Tool menu offers a link to “Send App Feedback”.  Clicking the link does no such thing. Instead, the link takes you to a Complaint form for things like lost baggage.",
+                    "attributes": {
+                        "type": "text"
+                    }
+                },
+                "link": {
+                    "attributes": {
+                        "rel": "related",
+                        "href": "https://itunes.apple.com/us/review?id=640437525&type=Purple%20Software"
+                    }
+                },
+                "im:voteSum": {
+                    "label": "0"
+                },
+                "im:contentType": {
+                    "attributes": {
+                        "term": "Application",
+                        "label": "Application"
+                    }
+                },
+                "im:voteCount": {
+                    "label": "0"
+                }
+            },
+            {
+                "author": {
+                    "uri": {
+                        "label": "https://itunes.apple.com/us/reviews/id1115664004"
+                    },
+                    "name": {
+                        "label": "1997Toto"
+                    },
+                    "label": ""
+                },
+                "updated": {
+                    "label": "2023-03-11T12:02:09-07:00"
+                },
+                "im:rating": {
+                    "label": "1"
+                },
+                "im:version": {
+                    "label": "3.96.0"
+                },
+                "id": {
+                    "label": "9703219249"
+                },
+                "title": {
+                    "label": "Not useful in USA"
+                },
+                "content": {
+                    "label": "Seat pre-purchase did not go through. Credit card showed a charge, but sale did not complete because airline did not “claim” it. Send from two seats on the window side to two seats in the middle of the center aisle. 10.5 hours. Both ways. \n\nApp did not retain TSA Pre-check with check in and did not transfer to paper ticket issues at counter. Was rejected at TSA Pre-check and had to stand in 30 minute standard security line. \n\nDo not recommend using from the USA",
+                    "attributes": {
+                        "type": "text"
+                    }
+                },
+                "link": {
+                    "attributes": {
+                        "rel": "related",
+                        "href": "https://itunes.apple.com/us/review?id=640437525&type=Purple%20Software"
+                    }
+                },
+                "im:voteSum": {
+                    "label": "0"
+                },
+                "im:contentType": {
+                    "attributes": {
+                        "term": "Application",
+                        "label": "Application"
+                    }
+                },
+                "im:voteCount": {
+                    "label": "0"
+                }
+            },
+            {
+                "author": {
+                    "uri": {
+                        "label": "https://itunes.apple.com/us/reviews/id167999862"
+                    },
+                    "name": {
+                        "label": "Sssjae"
+                    },
+                    "label": ""
+                },
+                "updated": {
+                    "label": "2022-05-28T16:08:08-07:00"
+                },
+                "im:rating": {
+                    "label": "1"
+                },
+                "im:version": {
+                    "label": "3.79.0"
+                },
+                "id": {
+                    "label": "8718069432"
+                },
+                "title": {
+                    "label": "Freezes up after putting in pi"
+                },
+                "content": {
+                    "label": "Was never able to open an account. Freezes up.",
+                    "attributes": {
+                        "type": "text"
+                    }
+                },
+                "link": {
+                    "attributes": {
+                        "rel": "related",
+                        "href": "https://itunes.apple.com/us/review?id=640437525&type=Purple%20Software"
+                    }
+                },
+                "im:voteSum": {
+                    "label": "0"
+                },
+                "im:contentType": {
+                    "attributes": {
+                        "term": "Application",
+                        "label": "Application"
+                    }
+                },
+                "im:voteCount": {
+                    "label": "0"
+                }
+            },
+            {
+                "author": {
+                    "uri": {
+                        "label": "https://itunes.apple.com/us/reviews/id450594974"
+                    },
+                    "name": {
+                        "label": "JohnnnnnnyB.The.One"
+                    },
+                    "label": ""
+                },
+                "updated": {
+                    "label": "2021-03-14T11:35:17-07:00"
+                },
+                "im:rating": {
+                    "label": "1"
+                },
+                "im:version": {
+                    "label": "3.57.0"
+                },
+                "id": {
+                    "label": "7102963597"
+                },
+                "title": {
+                    "label": "Reviews are very old!"
+                },
+                "content": {
+                    "label": "Reviews are very old! Any review over 3 months is not worth time to read. \nWhat is the current status flying on Qantas?",
+                    "attributes": {
+                        "type": "text"
+                    }
+                },
+                "link": {
+                    "attributes": {
+                        "rel": "related",
+                        "href": "https://itunes.apple.com/us/review?id=640437525&type=Purple%20Software"
+                    }
+                },
+                "im:voteSum": {
+                    "label": "0"
+                },
+                "im:contentType": {
+                    "attributes": {
+                        "term": "Application",
+                        "label": "Application"
+                    }
+                },
+                "im:voteCount": {
+                    "label": "0"
+                }
+            },
+            {
+                "author": {
+                    "uri": {
+                        "label": "https://itunes.apple.com/us/reviews/id154161897"
+                    },
+                    "name": {
+                        "label": "Hondo X"
+                    },
+                    "label": ""
+                },
+                "updated": {
+                    "label": "2020-11-24T07:11:04-07:00"
+                },
+                "im:rating": {
+                    "label": "1"
+                },
+                "im:version": {
+                    "label": "3.56.0"
+                },
+                "id": {
+                    "label": "6680941714"
+                },
+                "title": {
+                    "label": "Stay Away"
+                },
+                "content": {
+                    "label": "CEO is mindless believer in the Flu World Order dystopia #COVEXIT",
+                    "attributes": {
+                        "type": "text"
+                    }
+                },
+                "link": {
+                    "attributes": {
+                        "rel": "related",
+                        "href": "https://itunes.apple.com/us/review?id=640437525&type=Purple%20Software"
+                    }
+                },
+                "im:voteSum": {
+                    "label": "0"
+                },
+                "im:contentType": {
+                    "attributes": {
+                        "term": "Application",
+                        "label": "Application"
+                    }
+                },
+                "im:voteCount": {
+                    "label": "0"
+                }
+            },
+            {
+                "author": {
+                    "uri": {
+                        "label": "https://itunes.apple.com/us/reviews/id1109903450"
+                    },
+                    "name": {
+                        "label": "appsaresupposedtosavetime"
+                    },
+                    "label": ""
+                },
+                "updated": {
+                    "label": "2019-12-18T12:58:06-07:00"
+                },
+                "im:rating": {
+                    "label": "1"
+                },
+                "im:version": {
+                    "label": "3.50.0"
+                },
+                "id": {
+                    "label": "5288561666"
+                },
+                "title": {
+                    "label": "Zero stars"
+                },
+                "content": {
+                    "label": "The app didn’t recognize my CORRECT frequent flyer details. Now I’m locked out whilst overseas and the only way to reset the pin is by starting a 3-5 day process which doesn’t include the 2 x one hour phone calls to get to that stage. Wish I never downloaded it and I would recommend thinking twice before trying it yourself. Especially when you’re away from home.",
+                    "attributes": {
+                        "type": "text"
+                    }
+                },
+                "link": {
+                    "attributes": {
+                        "rel": "related",
+                        "href": "https://itunes.apple.com/us/review?id=640437525&type=Purple%20Software"
+                    }
+                },
+                "im:voteSum": {
+                    "label": "0"
+                },
+                "im:contentType": {
+                    "attributes": {
+                        "term": "Application",
+                        "label": "Application"
+                    }
+                },
+                "im:voteCount": {
+                    "label": "1"
+                }
+            },
+            {
+                "author": {
+                    "uri": {
+                        "label": "https://itunes.apple.com/us/reviews/id450213834"
+                    },
+                    "name": {
+                        "label": "santafevolleyball"
+                    },
+                    "label": ""
+                },
+                "updated": {
+                    "label": "2019-12-17T11:44:40-07:00"
+                },
+                "im:rating": {
+                    "label": "3"
+                },
+                "im:version": {
+                    "label": "3.50.0"
+                },
+                "id": {
+                    "label": "5284392415"
+                },
+                "title": {
+                    "label": "Features don't work"
+                },
+                "content": {
+                    "label": "Good at basic functions but features like 'add to calendar' and 'add to boarding pass to Apple wallet' don't work/appear broken. Not as intuitive or comprehensive as other airline apps now available in the market.",
+                    "attributes": {
+                        "type": "text"
+                    }
+                },
+                "link": {
+                    "attributes": {
+                        "rel": "related",
+                        "href": "https://itunes.apple.com/us/review?id=640437525&type=Purple%20Software"
+                    }
+                },
+                "im:voteSum": {
+                    "label": "0"
+                },
+                "im:contentType": {
+                    "attributes": {
+                        "term": "Application",
+                        "label": "Application"
+                    }
+                },
+                "im:voteCount": {
+                    "label": "0"
+                }
+            },
+            {
+                "author": {
+                    "uri": {
+                        "label": "https://itunes.apple.com/us/reviews/id154243291"
+                    },
+                    "name": {
+                        "label": "kfinley2019"
+                    },
+                    "label": ""
+                },
+                "updated": {
+                    "label": "2019-11-17T16:33:57-07:00"
+                },
+                "im:rating": {
+                    "label": "5"
+                },
+                "im:version": {
+                    "label": "3.48.0"
+                },
+                "id": {
+                    "label": "5161719737"
+                },
+                "title": {
+                    "label": "Great App"
+                },
+                "content": {
+                    "label": "The App is very user friendly.  It was easy to navigate & fast.  I did it while waiting for my flight.",
+                    "attributes": {
+                        "type": "text"
+                    }
+                },
+                "link": {
+                    "attributes": {
+                        "rel": "related",
+                        "href": "https://itunes.apple.com/us/review?id=640437525&type=Purple%20Software"
+                    }
+                },
+                "im:voteSum": {
+                    "label": "0"
+                },
+                "im:contentType": {
+                    "attributes": {
+                        "term": "Application",
+                        "label": "Application"
+                    }
+                },
+                "im:voteCount": {
+                    "label": "1"
+                }
+            },
+            {
+                "author": {
+                    "uri": {
+                        "label": "https://itunes.apple.com/us/reviews/id428010595"
+                    },
+                    "name": {
+                        "label": "gingeraid"
+                    },
+                    "label": ""
+                },
+                "updated": {
+                    "label": "2019-11-12T21:24:11-07:00"
+                },
+                "im:rating": {
+                    "label": "1"
+                },
+                "im:version": {
+                    "label": "3.48.0"
+                },
+                "id": {
+                    "label": "5130504971"
+                },
+                "title": {
+                    "label": "Hate Numbers"
+                },
+                "content": {
+                    "label": "Don’t update hate numbers",
+                    "attributes": {
+                        "type": "text"
+                    }
+                },
+                "link": {
+                    "attributes": {
+                        "rel": "related",
+                        "href": "https://itunes.apple.com/us/review?id=640437525&type=Purple%20Software"
+                    }
+                },
+                "im:voteSum": {
+                    "label": "0"
+                },
+                "im:contentType": {
+                    "attributes": {
+                        "term": "Application",
+                        "label": "Application"
+                    }
+                },
+                "im:voteCount": {
+                    "label": "0"
+                }
+            },
+            {
+                "author": {
+                    "uri": {
+                        "label": "https://itunes.apple.com/us/reviews/id29979858"
+                    },
+                    "name": {
+                        "label": "SenorGreg"
+                    },
+                    "label": ""
+                },
+                "updated": {
+                    "label": "2019-10-04T17:58:34-07:00"
+                },
+                "im:rating": {
+                    "label": "3"
+                },
+                "im:version": {
+                    "label": "3.46.0"
+                },
+                "id": {
+                    "label": "4887540019"
+                },
+                "title": {
+                    "label": "Good app, could improve compared to other airline apps"
+                },
+                "content": {
+                    "label": "The Qantas app is good but is lacking in two main areas. \n\n1. Tickets added to Apple Wallet do not automatically update and do not show up on screen before a flight. This functionality is very handy and has been standard with other airlines, such as American, for a long time. \n\n2. Award Flights Search - while you can now, finally, search for award flights in the app, it is very unintuitive to find. One must search for a regular flight then scroll to the bottom and choose Classic Flight Rewards. Additionally, this search appears to take place in a browser window, making it slower and more difficult to use. \n\nI sincerely hope Qantas improve these two features.",
+                    "attributes": {
+                        "type": "text"
+                    }
+                },
+                "link": {
+                    "attributes": {
+                        "rel": "related",
+                        "href": "https://itunes.apple.com/us/review?id=640437525&type=Purple%20Software"
+                    }
+                },
+                "im:voteSum": {
+                    "label": "0"
+                },
+                "im:contentType": {
+                    "attributes": {
+                        "term": "Application",
+                        "label": "Application"
+                    }
+                },
+                "im:voteCount": {
+                    "label": "0"
+                }
+            },
+            {
+                "author": {
+                    "uri": {
+                        "label": "https://itunes.apple.com/us/reviews/id321049815"
+                    },
+                    "name": {
+                        "label": "Mags Pete"
+                    },
+                    "label": ""
+                },
+                "updated": {
+                    "label": "2019-09-05T01:10:52-07:00"
+                },
+                "im:rating": {
+                    "label": "5"
+                },
+                "im:version": {
+                    "label": "3.45.0"
+                },
+                "id": {
+                    "label": "4729420040"
+                },
+                "title": {
+                    "label": "BNE to Sydney Review"
+                },
+                "content": {
+                    "label": "No matter we’re I travel at home or abroad Qantas beats all other airlines hands down. Thank you QANTAS.",
+                    "attributes": {
+                        "type": "text"
+                    }
+                },
+                "link": {
+                    "attributes": {
+                        "rel": "related",
+                        "href": "https://itunes.apple.com/us/review?id=640437525&type=Purple%20Software"
+                    }
+                },
+                "im:voteSum": {
+                    "label": "0"
+                },
+                "im:contentType": {
+                    "attributes": {
+                        "term": "Application",
+                        "label": "Application"
+                    }
+                },
+                "im:voteCount": {
+                    "label": "0"
+                }
+            },
+            {
+                "author": {
+                    "uri": {
+                        "label": "https://itunes.apple.com/us/reviews/id203857209"
+                    },
+                    "name": {
+                        "label": "Joninaus"
+                    },
+                    "label": ""
+                },
+                "updated": {
+                    "label": "2019-08-02T01:42:20-07:00"
+                },
+                "im:rating": {
+                    "label": "5"
+                },
+                "im:version": {
+                    "label": "3.42.0"
+                },
+                "id": {
+                    "label": "4554687627"
+                },
+                "title": {
+                    "label": "Great app!"
+                },
+                "content": {
+                    "label": "Intuitive and easy to use! Nothing to complain about!",
+                    "attributes": {
+                        "type": "text"
+                    }
+                },
+                "link": {
+                    "attributes": {
+                        "rel": "related",
+                        "href": "https://itunes.apple.com/us/review?id=640437525&type=Purple%20Software"
+                    }
+                },
+                "im:voteSum": {
+                    "label": "0"
+                },
+                "im:contentType": {
+                    "attributes": {
+                        "term": "Application",
+                        "label": "Application"
+                    }
+                },
+                "im:voteCount": {
+                    "label": "0"
+                }
+            },
+            {
+                "author": {
+                    "uri": {
+                        "label": "https://itunes.apple.com/us/reviews/id217522925"
+                    },
+                    "name": {
+                        "label": "Love, Charlie"
+                    },
+                    "label": ""
+                },
+                "updated": {
+                    "label": "2019-07-25T15:19:41-07:00"
+                },
+                "im:rating": {
+                    "label": "5"
+                },
+                "im:version": {
+                    "label": "3.41.0"
+                },
+                "id": {
+                    "label": "4516948531"
+                },
+                "title": {
+                    "label": "Best Airline App I’ve Used"
+                },
+                "content": {
+                    "label": "Qantas App is probably the best airline app I have used.",
+                    "attributes": {
+                        "type": "text"
+                    }
+                },
+                "link": {
+                    "attributes": {
+                        "rel": "related",
+                        "href": "https://itunes.apple.com/us/review?id=640437525&type=Purple%20Software"
+                    }
+                },
+                "im:voteSum": {
+                    "label": "0"
+                },
+                "im:contentType": {
+                    "attributes": {
+                        "term": "Application",
+                        "label": "Application"
+                    }
+                },
+                "im:voteCount": {
+                    "label": "1"
+                }
+            },
+            {
+                "author": {
+                    "uri": {
+                        "label": "https://itunes.apple.com/us/reviews/id28978575"
+                    },
+                    "name": {
+                        "label": "GPNYC"
+                    },
+                    "label": ""
+                },
+                "updated": {
+                    "label": "2019-04-08T21:15:53-07:00"
+                },
+                "im:rating": {
+                    "label": "1"
+                },
+                "im:version": {
+                    "label": "3.36.0"
+                },
+                "id": {
+                    "label": "3989048922"
+                },
+                "title": {
+                    "label": "Worst Airline App I Have Ever Used"
+                },
+                "content": {
+                    "label": "The airline needs to study other airline apps to see why they work and this one doesn’t. The level of functionality and travel details provided to the traveler are laughably low. Other than check in and boarding pass, this is useless. When boarding a flight 2 days ago I had to use a paper boarding pass rather than the app to get a scanner to read it.",
+                    "attributes": {
+                        "type": "text"
+                    }
+                },
+                "link": {
+                    "attributes": {
+                        "rel": "related",
+                        "href": "https://itunes.apple.com/us/review?id=640437525&type=Purple%20Software"
+                    }
+                },
+                "im:voteSum": {
+                    "label": "0"
+                },
+                "im:contentType": {
+                    "attributes": {
+                        "term": "Application",
+                        "label": "Application"
+                    }
+                },
+                "im:voteCount": {
+                    "label": "0"
+                }
+            },
+            {
+                "author": {
+                    "uri": {
+                        "label": "https://itunes.apple.com/us/reviews/id110931037"
+                    },
+                    "name": {
+                        "label": "alexander post"
+                    },
+                    "label": ""
+                },
+                "updated": {
+                    "label": "2019-03-11T14:18:08-07:00"
+                },
+                "im:rating": {
+                    "label": "1"
+                },
+                "im:version": {
+                    "label": "3.34.0"
+                },
+                "id": {
+                    "label": "3870678258"
+                },
+                "title": {
+                    "label": "Useless, just use the website"
+                },
+                "content": {
+                    "label": "Don’t waste your time. The app should ideally facilitate a smoother interaction with qantas services, booking, tickets, checkin, seats, meals, flight info... you know, basic flight related matters. \nUnfortunately everything you’d expect to do in the app sends you to the website. Literally everything.",
+                    "attributes": {
+                        "type": "text"
+                    }
+                },
+                "link": {
+                    "attributes": {
+                        "rel": "related",
+                        "href": "https://itunes.apple.com/us/review?id=640437525&type=Purple%20Software"
+                    }
+                },
+                "im:voteSum": {
+                    "label": "0"
+                },
+                "im:contentType": {
+                    "attributes": {
+                        "term": "Application",
+                        "label": "Application"
+                    }
+                },
+                "im:voteCount": {
+                    "label": "0"
+                }
+            },
+            {
+                "author": {
+                    "uri": {
+                        "label": "https://itunes.apple.com/us/reviews/id119366506"
+                    },
+                    "name": {
+                        "label": "Yip2599"
+                    },
+                    "label": ""
+                },
+                "updated": {
+                    "label": "2019-03-02T15:01:22-07:00"
+                },
+                "im:rating": {
+                    "label": "1"
+                },
+                "im:version": {
+                    "label": "3.33.1"
+                },
+                "id": {
+                    "label": "3834526522"
+                },
+                "title": {
+                    "label": "Shockingly bad"
+                },
+                "content": {
+                    "label": "Compared to overseas apps this is a shocker. The developers need to take a look at one like United for inspiration. You can’t book a flight (yes I have latest version), to manage a booked flight you just get directed to their web page to log on AGAIN, there’s no standby or upgrade details etc etc. Not sure what the point of the app is. Very basic.",
+                    "attributes": {
+                        "type": "text"
+                    }
+                },
+                "link": {
+                    "attributes": {
+                        "rel": "related",
+                        "href": "https://itunes.apple.com/us/review?id=640437525&type=Purple%20Software"
+                    }
+                },
+                "im:voteSum": {
+                    "label": "0"
+                },
+                "im:contentType": {
+                    "attributes": {
+                        "term": "Application",
+                        "label": "Application"
+                    }
+                },
+                "im:voteCount": {
+                    "label": "0"
+                }
+            },
+            {
+                "author": {
+                    "uri": {
+                        "label": "https://itunes.apple.com/us/reviews/id157000520"
+                    },
+                    "name": {
+                        "label": "ScubaX92"
+                    },
+                    "label": ""
+                },
+                "updated": {
+                    "label": "2019-02-13T12:54:10-07:00"
+                },
+                "im:rating": {
+                    "label": "5"
+                },
+                "im:version": {
+                    "label": "3.32.0"
+                },
+                "id": {
+                    "label": "3766405694"
+                },
+                "title": {
+                    "label": "Loyalty Card"
+                },
+                "content": {
+                    "label": "It would be extremely useful to be able to add Qantas Loyalty Card to Wallet just as American Airlines and Delta",
+                    "attributes": {
+                        "type": "text"
+                    }
+                },
+                "link": {
+                    "attributes": {
+                        "rel": "related",
+                        "href": "https://itunes.apple.com/us/review?id=640437525&type=Purple%20Software"
+                    }
+                },
+                "im:voteSum": {
+                    "label": "0"
+                },
+                "im:contentType": {
+                    "attributes": {
+                        "term": "Application",
+                        "label": "Application"
+                    }
+                },
+                "im:voteCount": {
+                    "label": "0"
+                }
+            },
+            {
+                "author": {
+                    "uri": {
+                        "label": "https://itunes.apple.com/us/reviews/id19273957"
+                    },
+                    "name": {
+                        "label": "sdemw"
+                    },
+                    "label": ""
+                },
+                "updated": {
+                    "label": "2018-12-10T19:49:59-07:00"
+                },
+                "im:rating": {
+                    "label": "1"
+                },
+                "im:version": {
+                    "label": "3.31.1"
+                },
+                "id": {
+                    "label": "3517693531"
+                },
+                "title": {
+                    "label": "Still won’t open"
+                },
+                "content": {
+                    "label": "Open and crash as with last version ....",
+                    "attributes": {
+                        "type": "text"
+                    }
+                },
+                "link": {
+                    "attributes": {
+                        "rel": "related",
+                        "href": "https://itunes.apple.com/us/review?id=640437525&type=Purple%20Software"
+                    }
+                },
+                "im:voteSum": {
+                    "label": "0"
+                },
+                "im:contentType": {
+                    "attributes": {
+                        "term": "Application",
+                        "label": "Application"
+                    }
+                },
+                "im:voteCount": {
+                    "label": "0"
+                }
+            },
+            {
+                "author": {
+                    "uri": {
+                        "label": "https://itunes.apple.com/us/reviews/id168954912"
+                    },
+                    "name": {
+                        "label": "Leardriver11"
+                    },
+                    "label": ""
+                },
+                "updated": {
+                    "label": "2018-11-17T01:08:07-07:00"
+                },
+                "im:rating": {
+                    "label": "1"
+                },
+                "im:version": {
+                    "label": "3.30.0"
+                },
+                "id": {
+                    "label": "3427446212"
+                },
+                "title": {
+                    "label": "Always crashes"
+                },
+                "content": {
+                    "label": "I’ve tried to use this app for 3 years. Any time I try to open it, it spontaneously closes. It is completely unusable. Very disappointing for an otherwise great airline.",
+                    "attributes": {
+                        "type": "text"
+                    }
+                },
+                "link": {
+                    "attributes": {
+                        "rel": "related",
+                        "href": "https://itunes.apple.com/us/review?id=640437525&type=Purple%20Software"
+                    }
+                },
+                "im:voteSum": {
+                    "label": "0"
+                },
+                "im:contentType": {
+                    "attributes": {
+                        "term": "Application",
+                        "label": "Application"
+                    }
+                },
+                "im:voteCount": {
+                    "label": "0"
+                }
+            },
+            {
+                "author": {
+                    "uri": {
+                        "label": "https://itunes.apple.com/us/reviews/id207465375"
+                    },
+                    "name": {
+                        "label": "Justinaplin"
+                    },
+                    "label": ""
+                },
+                "updated": {
+                    "label": "2018-10-22T16:49:14-07:00"
+                },
+                "im:rating": {
+                    "label": "5"
+                },
+                "im:version": {
+                    "label": "3.28.0"
+                },
+                "id": {
+                    "label": "3332471802"
+                },
+                "title": {
+                    "label": "Love it"
+                },
+                "content": {
+                    "label": "I love the app.  I have 2 upcoming flights and once I added my confirmation number to the app it pulled the flights and all the details.  Definitely one of the best airline apps that I have seen so far.",
+                    "attributes": {
+                        "type": "text"
+                    }
+                },
+                "link": {
+                    "attributes": {
+                        "rel": "related",
+                        "href": "https://itunes.apple.com/us/review?id=640437525&type=Purple%20Software"
+                    }
+                },
+                "im:voteSum": {
+                    "label": "0"
+                },
+                "im:contentType": {
+                    "attributes": {
+                        "term": "Application",
+                        "label": "Application"
+                    }
+                },
+                "im:voteCount": {
+                    "label": "0"
+                }
+            },
+            {
+                "author": {
+                    "uri": {
+                        "label": "https://itunes.apple.com/us/reviews/id419894586"
+                    },
+                    "name": {
+                        "label": "professordoctor"
+                    },
+                    "label": ""
+                },
+                "updated": {
+                    "label": "2018-09-10T05:49:51-07:00"
+                },
+                "im:rating": {
+                    "label": "1"
+                },
+                "im:version": {
+                    "label": "3.24.1"
+                },
+                "id": {
+                    "label": "3174690010"
+                },
+                "title": {
+                    "label": "Doesn’t even open"
+                },
+                "content": {
+                    "label": "Still waiting to be able to use this app",
+                    "attributes": {
+                        "type": "text"
+                    }
+                },
+                "link": {
+                    "attributes": {
+                        "rel": "related",
+                        "href": "https://itunes.apple.com/us/review?id=640437525&type=Purple%20Software"
+                    }
+                },
+                "im:voteSum": {
+                    "label": "0"
+                },
+                "im:contentType": {
+                    "attributes": {
+                        "term": "Application",
+                        "label": "Application"
+                    }
+                },
+                "im:voteCount": {
+                    "label": "0"
+                }
+            },
+            {
+                "author": {
+                    "uri": {
+                        "label": "https://itunes.apple.com/us/reviews/id37730581"
+                    },
+                    "name": {
+                        "label": "mridgley1"
+                    },
+                    "label": ""
+                },
+                "updated": {
+                    "label": "2018-07-24T12:23:32-07:00"
+                },
+                "im:rating": {
+                    "label": "1"
+                },
+                "im:version": {
+                    "label": "3.22.1"
+                },
+                "id": {
+                    "label": "2962709508"
+                },
+                "title": {
+                    "label": "I never write reviews but this is horrible."
+                },
+                "content": {
+                    "label": "I never write reviews but this is horrible. The app doesn’t update when you pull down to refresh, leaving you confused and frustrated when dealing with delayed flights.",
+                    "attributes": {
+                        "type": "text"
+                    }
+                },
+                "link": {
+                    "attributes": {
+                        "rel": "related",
+                        "href": "https://itunes.apple.com/us/review?id=640437525&type=Purple%20Software"
+                    }
+                },
+                "im:voteSum": {
+                    "label": "0"
+                },
+                "im:contentType": {
+                    "attributes": {
+                        "term": "Application",
+                        "label": "Application"
+                    }
+                },
+                "im:voteCount": {
+                    "label": "0"
+                }
+            },
+            {
+                "author": {
+                    "uri": {
+                        "label": "https://itunes.apple.com/us/reviews/id343475879"
+                    },
+                    "name": {
+                        "label": "trmun"
+                    },
+                    "label": ""
+                },
+                "updated": {
+                    "label": "2018-04-23T21:45:19-07:00"
+                },
+                "im:rating": {
+                    "label": "1"
+                },
+                "im:version": {
+                    "label": "3.19"
+                },
+                "id": {
+                    "label": "2460673645"
+                },
+                "title": {
+                    "label": "App now quits on startup"
+                },
+                "content": {
+                    "label": "Just updated and now just quits on startup - latest iOS on iPhone 8+\n\nRubbish",
+                    "attributes": {
+                        "type": "text"
+                    }
+                },
+                "link": {
+                    "attributes": {
+                        "rel": "related",
+                        "href": "https://itunes.apple.com/us/review?id=640437525&type=Purple%20Software"
+                    }
+                },
+                "im:voteSum": {
+                    "label": "0"
+                },
+                "im:contentType": {
+                    "attributes": {
+                        "term": "Application",
+                        "label": "Application"
+                    }
+                },
+                "im:voteCount": {
+                    "label": "0"
+                }
+            },
+            {
+                "author": {
+                    "uri": {
+                        "label": "https://itunes.apple.com/us/reviews/id107382113"
+                    },
+                    "name": {
+                        "label": "jnpowrie"
+                    },
+                    "label": ""
+                },
+                "updated": {
+                    "label": "2018-03-19T20:29:22-07:00"
+                },
+                "im:rating": {
+                    "label": "4"
+                },
+                "im:version": {
+                    "label": "3.18"
+                },
+                "id": {
+                    "label": "2325178535"
+                },
+                "title": {
+                    "label": "Rewards Flights"
+                },
+                "content": {
+                    "label": "Numerous times have booked flights with OneWorld airlines but regardless of whether I use my Qantas number or not, the trip doesn’t appear in the app. Why have the “Add Trip” feature if you can’t add your trip?!\nLook at the American Airlines app and copy the good things.",
+                    "attributes": {
+                        "type": "text"
+                    }
+                },
+                "link": {
+                    "attributes": {
+                        "rel": "related",
+                        "href": "https://itunes.apple.com/us/review?id=640437525&type=Purple%20Software"
+                    }
+                },
+                "im:voteSum": {
+                    "label": "1"
+                },
+                "im:contentType": {
+                    "attributes": {
+                        "term": "Application",
+                        "label": "Application"
+                    }
+                },
+                "im:voteCount": {
+                    "label": "1"
+                }
+            },
+            {
+                "author": {
+                    "uri": {
+                        "label": "https://itunes.apple.com/us/reviews/id104623535"
+                    },
+                    "name": {
+                        "label": "not happy jan2"
+                    },
+                    "label": ""
+                },
+                "updated": {
+                    "label": "2017-11-13T14:29:40-07:00"
+                },
+                "im:rating": {
+                    "label": "1"
+                },
+                "im:version": {
+                    "label": "3.15"
+                },
+                "id": {
+                    "label": "1918916118"
+                },
+                "title": {
+                    "label": "Quits on start every time! Worst app"
+                },
+                "content": {
+                    "label": "Quits on start every time! Worst app",
+                    "attributes": {
+                        "type": "text"
+                    }
+                },
+                "link": {
+                    "attributes": {
+                        "rel": "related",
+                        "href": "https://itunes.apple.com/us/review?id=640437525&type=Purple%20Software"
+                    }
+                },
+                "im:voteSum": {
+                    "label": "0"
+                },
+                "im:contentType": {
+                    "attributes": {
+                        "term": "Application",
+                        "label": "Application"
+                    }
+                },
+                "im:voteCount": {
+                    "label": "0"
+                }
+            },
+            {
+                "author": {
+                    "uri": {
+                        "label": "https://itunes.apple.com/us/reviews/id231809628"
+                    },
+                    "name": {
+                        "label": "Richie.Aus"
+                    },
+                    "label": ""
+                },
+                "updated": {
+                    "label": "2017-09-26T00:52:35-07:00"
+                },
+                "im:rating": {
+                    "label": "1"
+                },
+                "im:version": {
+                    "label": "3.13"
+                },
+                "id": {
+                    "label": "1810520479"
+                },
+                "title": {
+                    "label": "Booking issue."
+                },
+                "content": {
+                    "label": "I live in the USA, ever since downloading the app 2 years ago I haven’t been able to make a booking through the app.... it goes to the booking section but then has the loading symbol circling in the middle of the page, you can’t select/input anything into the search areas. So very annoying, please fix this! I would have thought after a couple years this issue would have been resolved.",
+                    "attributes": {
+                        "type": "text"
+                    }
+                },
+                "link": {
+                    "attributes": {
+                        "rel": "related",
+                        "href": "https://itunes.apple.com/us/review?id=640437525&type=Purple%20Software"
+                    }
+                },
+                "im:voteSum": {
+                    "label": "3"
+                },
+                "im:contentType": {
+                    "attributes": {
+                        "term": "Application",
+                        "label": "Application"
+                    }
+                },
+                "im:voteCount": {
+                    "label": "4"
+                }
+            },
+            {
+                "author": {
+                    "uri": {
+                        "label": "https://itunes.apple.com/us/reviews/id37662110"
+                    },
+                    "name": {
+                        "label": "_R3k"
+                    },
+                    "label": ""
+                },
+                "updated": {
+                    "label": "2017-08-08T08:53:20-07:00"
+                },
+                "im:rating": {
+                    "label": "3"
+                },
+                "im:version": {
+                    "label": "3.12"
+                },
+                "id": {
+                    "label": "1718800203"
+                },
+                "title": {
+                    "label": "Electronic boarding passes ? Check in?"
+                },
+                "content": {
+                    "label": "Taking an international flight tonight, seems there is no way to check in or display an electronic boarding pass in app. To check in, you are directed to use the full website on a computer, and from there you can print out your electronic boarding pass. \n\nOther airlines have apps that can do this, yours should too.",
+                    "attributes": {
+                        "type": "text"
+                    }
+                },
+                "link": {
+                    "attributes": {
+                        "rel": "related",
+                        "href": "https://itunes.apple.com/us/review?id=640437525&type=Purple%20Software"
+                    }
+                },
+                "im:voteSum": {
+                    "label": "0"
+                },
+                "im:contentType": {
+                    "attributes": {
+                        "term": "Application",
+                        "label": "Application"
+                    }
+                },
+                "im:voteCount": {
+                    "label": "0"
+                }
+            },
+            {
+                "author": {
+                    "uri": {
+                        "label": "https://itunes.apple.com/us/reviews/id118188952"
+                    },
+                    "name": {
+                        "label": "Dr. Sher"
+                    },
+                    "label": ""
+                },
+                "updated": {
+                    "label": "2017-04-18T09:01:06-07:00"
+                },
+                "im:rating": {
+                    "label": "1"
+                },
+                "im:version": {
+                    "label": "3.8"
+                },
+                "id": {
+                    "label": "1591932055"
+                },
+                "title": {
+                    "label": "What have you done to the app, Qantas?"
+                },
+                "content": {
+                    "label": "I've been using this app for 3 years to book flights, hotels, cars, and tours with no problem, until this year. Now it takes forever for the booking screen to load, even after I've deleted the app and reloaded it. It's incredibly annoying and not what I expect from Qantas. Please fix the booking feature!",
+                    "attributes": {
+                        "type": "text"
+                    }
+                },
+                "link": {
+                    "attributes": {
+                        "rel": "related",
+                        "href": "https://itunes.apple.com/us/review?id=640437525&type=Purple%20Software"
+                    }
+                },
+                "im:voteSum": {
+                    "label": "0"
+                },
+                "im:contentType": {
+                    "attributes": {
+                        "term": "Application",
+                        "label": "Application"
+                    }
+                },
+                "im:voteCount": {
+                    "label": "0"
+                }
+            },
+            {
+                "author": {
+                    "uri": {
+                        "label": "https://itunes.apple.com/us/reviews/id355790314"
+                    },
+                    "name": {
+                        "label": "Djndvdjxjzkz"
+                    },
+                    "label": ""
+                },
+                "updated": {
+                    "label": "2016-09-25T22:28:57-07:00"
+                },
+                "im:rating": {
+                    "label": "1"
+                },
+                "im:version": {
+                    "label": "3.3"
+                },
+                "id": {
+                    "label": "1456014454"
+                },
+                "title": {
+                    "label": "Terrible experience; nothing works"
+                },
+                "content": {
+                    "label": "Fields constantly reset and when I finally do get the data I put into the fields to stick, I get an error trying to process the request. Terrible experience, erodes trust in Qantas.",
+                    "attributes": {
+                        "type": "text"
+                    }
+                },
+                "link": {
+                    "attributes": {
+                        "rel": "related",
+                        "href": "https://itunes.apple.com/us/review?id=640437525&type=Purple%20Software"
+                    }
+                },
+                "im:voteSum": {
+                    "label": "0"
+                },
+                "im:contentType": {
+                    "attributes": {
+                        "term": "Application",
+                        "label": "Application"
+                    }
+                },
+                "im:voteCount": {
+                    "label": "0"
+                }
+            }
+        ],
+        "updated": {
+            "label": "2025-09-30T00:01:42-07:00"
+        },
+        "rights": {
+            "label": "Copyright 2008 Apple Inc."
+        },
+        "title": {
+            "label": "iTunes Store: Customer Reviews"
+        },
+        "icon": {
+            "label": "http://itunes.apple.com/favicon.ico"
+        },
+        "link": [
+            {
+                "attributes": {
+                    "rel": "alternate",
+                    "type": "text/html",
+                    "href": "https://music.apple.com/WebObjects/MZStore.woa/wa/viewGrouping?cc=us&id=1"
+                }
+            },
+            {
+                "attributes": {
+                    "rel": "self",
+                    "href": "https://itunes.apple.com/us/rss/customerreviews/id=640437525/sortBy=mostRecent/page=1/json"
+                }
+            },
+            {
+                "attributes": {
+                    "rel": "first",
+                    "href": "https://itunes.apple.com/us/rss/customerreviews/page=1/id=640437525/sortby=mostrecent/xml?urlDesc=/customerreviews/id=640437525/sortBy=mostRecent/page=1/json"
+                }
+            },
+            {
+                "attributes": {
+                    "rel": "last",
+                    "href": "https://itunes.apple.com/us/rss/customerreviews/page=2/id=640437525/sortby=mostrecent/xml?urlDesc=/customerreviews/id=640437525/sortBy=mostRecent/page=1/json"
+                }
+            },
+            {
+                "attributes": {
+                    "rel": "previous",
+                    "href": "https://itunes.apple.com/us/rss/customerreviews/page=1/id=640437525/sortby=mostrecent/xml?urlDesc=/customerreviews/id=640437525/sortBy=mostRecent/page=1/json"
+                }
+            },
+            {
+                "attributes": {
+                    "rel": "next",
+                    "href": "https://itunes.apple.com/us/rss/customerreviews/page=2/id=640437525/sortby=mostrecent/xml?urlDesc=/customerreviews/id=640437525/sortBy=mostRecent/page=1/json"
+                }
+            }
+        ],
+        "id": {
+            "label": "https://itunes.apple.com/us/rss/customerreviews/id=640437525/sortBy=mostRecent/page=1/json"
+        }
+    }
+}

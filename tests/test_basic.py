@@ -6,14 +6,20 @@ from pytest_mock import MockerFixture
 
 from app.api.adapter import AppStoreReviewViewerAdapter
 from app.api.app import FastAPIApplication
+from app.config import AppSettings
 from app.services.queue import PollReviewsTask
-from tests.conftest import TEST_APP_ID_INITIAL, TEST_APP_ID_UNKNOWN, TEST_REVIEWS_COUNT
+from tests.conftest import TEST_APP_ID_INITIAL_1, TEST_APP_ID_UNKNOWN, TEST_REVIEWS_COUNT
 
 logger = logging.getLogger("conftest")
 
 pytestmark = [
     pytest.mark.usefixtures("mock_external_http_requests"),
 ]
+
+
+@pytest.fixture
+def settings_overrides() -> AppSettings | None:
+    return AppSettings(SCHEDULER_ENABLED=False)
 
 
 async def test_get_apps(
@@ -26,7 +32,7 @@ async def test_get_apps(
 async def test_get_known_reviews(
     client: AppStoreReviewViewerAdapter, app: FastAPIApplication
 ) -> None:
-    app_id = TEST_APP_ID_INITIAL
+    app_id = TEST_APP_ID_INITIAL_1
     res = await client.get_reviews(app_id)
     assert len(res.items) == 0
 
@@ -54,7 +60,7 @@ async def test_get_unknown_reviews(
 async def test_get_reviews_race_condition(
     client: AppStoreReviewViewerAdapter, app: FastAPIApplication, mocker: MockerFixture
 ) -> None:
-    app_id = TEST_APP_ID_INITIAL
+    app_id = TEST_APP_ID_INITIAL_1
     spy = mocker.spy(app.state.external, "get_reviews")
 
     # in case of simultaneous requests for the same app, only one worker will poll reviews

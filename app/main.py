@@ -14,6 +14,7 @@ from app.integration.itunes.adapter import ItunesRSSAdapter
 from app.services import schemas
 from app.services.polling import DataPollingWorker
 from app.services.queue import DataPollingQueue
+from app.services.scheduller import SchedulerService
 from app.services.storage import StorageService
 
 logger = logging.getLogger("app.main")
@@ -25,8 +26,8 @@ def setup_logging(settings: AppSettings) -> None:
     logging.config.dictConfig(settings.LOGGING)
 
 
-def setup() -> FastAPIApplication:
-    settings = AppSettings()
+def setup(settings: AppSettings | None = None) -> FastAPIApplication:
+    settings = settings or AppSettings()
     setup_logging(settings)
     logger.info("Run app worker [%s]", click.style(os.getpid(), fg="cyan"))
     return FastAPIApplication.startup(settings, lifespan)
@@ -49,6 +50,8 @@ async def lifespan(app: FastAPIApplication):
         ) as client:
             app.state.external = ItunesRSSAdapter(client)
             setup_workers(app)
+            if app.state.settings.SCHEDULER_ENABLED:
+                setup_scheduler(app)
 
             yield
     finally:
@@ -61,6 +64,15 @@ async def setup_storage(app: FastAPIApplication) -> StorageService:
     for app_id in app.state.settings.STORAGE_INITIAL_APP_IDS:
         await storage.create_app(schemas.App(id=app_id))
     return storage
+
+
+def setup_scheduler(app: FastAPIApplication) -> None:
+    scheduler = SchedulerService(
+        app.state.queue,
+        app.state.storage,
+        app.state.workers,
+    )
+    app.state.event_loop_tasks.append(asyncio.create_task(scheduler.run()))
 
 
 def setup_workers(app: FastAPIApplication):

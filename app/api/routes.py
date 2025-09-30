@@ -31,7 +31,6 @@ async def get_apps(request: Request) -> schemas.GetAppsResponse:
 async def get_reviews(app_id: AppID, request: Request) -> schemas.GetReviewsResponse:
     logger.info("Handle HTTP Request: %s %s", request.method, request.url)
 
-    event_loop_tasks = request.app.state.event_loop_tasks
     storage = request.app.state.storage
     queue = request.app.state.queue
 
@@ -39,7 +38,6 @@ async def get_reviews(app_id: AppID, request: Request) -> schemas.GetReviewsResp
         logger.debug("Existing app is requested: %s. ", app_id)
         logger.debug("Scheduled task to actualize reviews for next requests")
         task = queue.push(app_id)
-        # event_loop_tasks.append(asyncio.ensure_future(task)) # ???
 
     else:
         logger.debug("Unknown app is requested: %s. ", app_id)
@@ -50,7 +48,6 @@ async def get_reviews(app_id: AppID, request: Request) -> schemas.GetReviewsResp
         # NOTE: create app only after polling is completed
         app = schemas.App(id=app_id)
         await storage.create_app(app)
-
 
     reviews = await storage.get_review_list(app_id)
     return schemas.GetReviewsResponse(items=reviews)

@@ -18,19 +18,27 @@ from app.main import setup
 logger = logging.getLogger("conftest")
 
 
-TEST_APP_ID_INITIAL = AppSettings.model_fields["STORAGE_INITIAL_APP_IDS"].default[0]
+TEST_APP_IDS_INITIAL = AppSettings.model_fields["STORAGE_INITIAL_APP_IDS"].default
+TEST_APP_ID_INITIAL_1 = TEST_APP_IDS_INITIAL[0]
 TEST_APP_ID_UNKNOWN = 389801252  # not in initial app ids list
 TEST_REVIEWS_COUNT = 50
 
 
-@pytest.fixture(scope="session")
+@pytest.fixture
 def anyio_backend() -> Literal["asyncio"]:
     return "asyncio"
 
 
 @pytest.fixture
-async def app() -> AsyncGenerator[FastAPIApplication, None]:
-    app = setup()
+def settings_overrides() -> AppSettings | None:
+    return AppSettings(SCHEDULER_ENABLED=False)
+
+
+@pytest.fixture
+async def app(
+    settings_overrides: AppSettings | None,
+) -> AsyncGenerator[FastAPIApplication, None]:
+    app = setup(settings_overrides)
     async with LifespanManager(app):
         yield app
 

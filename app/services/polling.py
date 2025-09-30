@@ -1,3 +1,4 @@
+import asyncio
 import logging
 from typing import Never
 
@@ -24,20 +25,27 @@ class DataPollingWorker:
         self._queue = queue
         self._adapter = adapter
         self._id = id
+        self._is_available = asyncio.Event()
+
+    @property
+    def is_available(self) -> bool:
+        return self._is_available.is_set()
+
+    async def wait_for_availability(self) -> None:
+        await self._is_available.wait()
 
     async def run(self) -> Never:
         logger.info("Start worker: %s", self)
         while True:
+            self._is_available.set()
             task = await self._queue.pop()
             try:
                 await self.process(task)
             except Exception as e:
                 logger.exception(f"Error reviews polling for app {task.app_id}: {e}")
-                # task.failed()
-                # raise NotImplementedError
-
-            else:
+            finally:
                 self._queue.mark_complete(task)
+                self._is_available.clear()
 
     async def process(self, task: PollReviewsTask) -> None:
         logger.debug("%s; Processing task: %s", self, task)
