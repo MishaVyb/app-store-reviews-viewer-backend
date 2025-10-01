@@ -58,11 +58,15 @@ class StorageService:
         ]
         return list(reversed(sorted(filtered, key=lambda x: x.updated)))
 
-    async def load(self) -> bool:
-        if not self._path.exists() or self._path.read_text() == "":
-            return False
-        self._storage = Storage.model_validate_json(self._path.read_text())
-        return True
+    async def load(self) -> None:
+        if not self._path.exists():
+            return
+
+        content = self._path.read_text()
+        if content == "":
+            return
+
+        self._storage = Storage.model_validate_json(content)
 
     async def write(self) -> None:
         await asyncio.to_thread(self._path.write_text, self._storage.model_dump_json())
