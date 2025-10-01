@@ -1,5 +1,6 @@
 import asyncio
 import logging
+from datetime import datetime
 
 import pytest
 from pytest_mock import MockerFixture
@@ -10,6 +11,7 @@ from app.services.queue import PollReviewsTask
 from tests.conftest import (
     TEST_APP_ID_INITIAL_1,
     TEST_APP_ID_NO_REVIEWS,
+    TEST_APP_ID_ORDERED,
     TEST_APP_ID_UNKNOWN,
     TEST_REVIEWS_COUNT,
 )
@@ -60,6 +62,17 @@ async def test_get_unknown_reviews(
     # because it waits for the polling task to be completed (since the service got new app id to handle)
     res = await client.get_reviews(TEST_APP_ID_UNKNOWN)
     assert len(res.items) == TEST_REVIEWS_COUNT
+
+
+async def test_get_ordered_reviews(
+    client: AppStoreReviewViewerAdapter, app: FastAPIApplication
+) -> None:
+    res = await client.get_reviews(TEST_APP_ID_ORDERED)
+
+    # latest reviews go first
+    assert res.items[0].updated == datetime.fromisoformat("2025-01-03T00:00:00Z")
+    assert res.items[1].updated == datetime.fromisoformat("2025-01-02T00:00:00Z")
+    assert res.items[2].updated == datetime.fromisoformat("2025-01-01T00:00:00Z")
 
 
 async def test_get_reviews_pagination(

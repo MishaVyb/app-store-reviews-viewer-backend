@@ -44,7 +44,7 @@ async def get_reviews(
     queue = request.app.state.queue
 
     if app := await storage.get_app(app_id):
-        logger.debug("Existing app is requested: %s. ", app_id)
+        logger.debug("Existing app is requested: %s. ", app)
         logger.debug("Scheduled task to actualize reviews for next requests")
         task = queue.push(app_id)
 
@@ -53,10 +53,6 @@ async def get_reviews(
         logger.debug("Waiting for reviews being fetched for unknown app: %s", app_id)
         task = queue.push(app_id)
         await task
-
-        # create app only after polling is completed
-        app = schemas.App(id=app_id)
-        await storage.create_app(app)
 
     reviews = await storage.get_review_list(app_id, updated_min=updated_min)
     return schemas.GetReviewsResponse(items=reviews)

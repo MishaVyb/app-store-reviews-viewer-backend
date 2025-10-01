@@ -1,0 +1,218 @@
+{
+    "feed": {
+        "author": {
+            "name": {
+                "label": "iTunes Store"
+            },
+            "uri": {
+                "label": "http://www.apple.com/itunes/"
+            }
+        },
+        "entry": [
+            {
+                "author": {
+                    "uri": {
+                        "label": "https://itunes.apple.com/us/reviews/id1837485306"
+                    },
+                    "name": {
+                        "label": "TEST_USER_1"
+                    },
+                    "label": ""
+                },
+                "updated": {
+                    "label": "2025-01-01T00:00:00Z"
+                },
+                "im:rating": {
+                    "label": "3"
+                },
+                "im:version": {
+                    "label": "399.0.0"
+                },
+                "id": {
+                    "label": "1"
+                },
+                "title": {
+                    "label": "TEST_TITLE"
+                },
+                "content": {
+                    "label": "TEST_CONTENT",
+                    "attributes": {
+                        "type": "text"
+                    }
+                },
+                "link": {
+                    "attributes": {
+                        "rel": "related",
+                        "href": "https://itunes.apple.com/us/review?id=389801252&type=Purple%20Software"
+                    }
+                },
+                "im:voteSum": {
+                    "label": "0"
+                },
+                "im:contentType": {
+                    "attributes": {
+                        "term": "Application",
+                        "label": "Application"
+                    }
+                },
+                "im:voteCount": {
+                    "label": "0"
+                }
+            },
+            {
+                "author": {
+                    "uri": {
+                        "label": "https://itunes.apple.com/us/reviews/id1837485306"
+                    },
+                    "name": {
+                        "label": "TEST_USER_1"
+                    },
+                    "label": ""
+                },
+                "updated": {
+                    "label": "2025-01-03T00:00:00Z"
+                },
+                "im:rating": {
+                    "label": "3"
+                },
+                "im:version": {
+                    "label": "399.0.0"
+                },
+                "id": {
+                    "label": "2"
+                },
+                "title": {
+                    "label": "TEST_TITLE"
+                },
+                "content": {
+                    "label": "TEST_CONTENT",
+                    "attributes": {
+                        "type": "text"
+                    }
+                },
+                "link": {
+                    "attributes": {
+                        "rel": "related",
+                        "href": "https://itunes.apple.com/us/review?id=389801252&type=Purple%20Software"
+                    }
+                },
+                "im:voteSum": {
+                    "label": "0"
+                },
+                "im:contentType": {
+                    "attributes": {
+                        "term": "Application",
+                        "label": "Application"
+                    }
+                },
+                "im:voteCount": {
+                    "label": "0"
+                }
+            },
+            {
+                "author": {
+                    "uri": {
+                        "label": "https://itunes.apple.com/us/reviews/id1837485306"
+                    },
+                    "name": {
+                        "label": "TEST_USER_1"
+                    },
+                    "label": ""
+                },
+                "updated": {
+                    "label": "2025-01-02T00:00:00Z"
+                },
+                "im:rating": {
+                    "label": "3"
+                },
+                "im:version": {
+                    "label": "399.0.0"
+                },
+                "id": {
+                    "label": "3"
+                },
+                "title": {
+                    "label": "TEST_TITLE"
+                },
+                "content": {
+                    "label": "TEST_CONTENT",
+                    "attributes": {
+                        "type": "text"
+                    }
+                },
+                "link": {
+                    "attributes": {
+                        "rel": "related",
+                        "href": "https://itunes.apple.com/us/review?id=389801252&type=Purple%20Software"
+                    }
+                },
+                "im:voteSum": {
+                    "label": "0"
+                },
+                "im:contentType": {
+                    "attributes": {
+                        "term": "Application",
+                        "label": "Application"
+                    }
+                },
+                "im:voteCount": {
+                    "label": "0"
+                }
+            }
+        ],
+        "link": [
+            {
+                "attributes": {
+                    "rel": "alternate",
+                    "type": "text/html",
+                    "href": "https://music.apple.com/WebObjects/MZStore.woa/wa/viewGrouping?cc=us&id=1"
+                }
+            },
+            {
+                "attributes": {
+                    "rel": "self",
+                    "href": "https://itunes.apple.com/us/rss/customerreviews/id=-1/sortBy=mostRecent/page=1/json"
+                }
+            },
+            {
+                "attributes": {
+                    "rel": "first",
+                    "href": ""
+                }
+            },
+            {
+                "attributes": {
+                    "rel": "last",
+                    "href": ""
+                }
+            },
+            {
+                "attributes": {
+                    "rel": "previous",
+                    "href": ""
+                }
+            },
+            {
+                "attributes": {
+                    "rel": "next",
+                    "href": ""
+                }
+            }
+        ],
+        "updated": {
+            "label": "2025-09-29T18:31:30-07:00"
+        },
+        "rights": {
+            "label": "Copyright 2008 Apple Inc."
+        },
+        "title": {
+            "label": "iTunes Store: Customer Reviews"
+        },
+        "icon": {
+            "label": "http://itunes.apple.com/favicon.ico"
+        },
+        "id": {
+            "label": "https://itunes.apple.com/us/rss/customerreviews/id=1/sortBy=mostRecent/page=1/json"
+        }
+    }
+}

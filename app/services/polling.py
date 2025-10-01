@@ -65,7 +65,7 @@ class DataPollingWorker:
         Process task to poll reviews for a given App.
 
         It calls external adapter to get reviews, build compatible with StorageService
-        data and then create these entities in the storage.
+        models and then create these entities in the storage.
         """
         logger.debug("%s; Processing task: %s", self, task)
 
@@ -84,8 +84,8 @@ class DataPollingWorker:
                     title=entry.title.label,
                     content=entry.content.label,
                     author=entry.author.name.label,
-                    score=entry.im_rating.label,
-                    updated=entry.updated.label,
+                    score=entry.im_rating.label,  # type: ignore
+                    updated=entry.updated.label,  # type: ignore
                 )
                 reviews.append(review)
 
@@ -94,6 +94,11 @@ class DataPollingWorker:
                 break
 
         await self._storage.create_reviews(reviews)
+
+        # create app in case it does not exist
+        if not await self._storage.get_app(task.app_id):
+            app = schemas.App(id=task.app_id)
+            await self._storage.create_app(app)
 
     def __repr__(self) -> str:
         return f"{self.__class__.__name__}({self._id})"

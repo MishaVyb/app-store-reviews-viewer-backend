@@ -56,7 +56,7 @@ class StorageService:
             if review.app_id == app_id
             and (updated_min is None or review.updated >= updated_min)
         ]
-        return sorted(filtered, key=lambda x: x.updated)
+        return list(reversed(sorted(filtered, key=lambda x: x.updated)))
 
     async def load(self) -> bool:
         if not self._path.exists() or self._path.read_text() == "":

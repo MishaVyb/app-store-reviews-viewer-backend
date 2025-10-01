@@ -1,6 +1,6 @@
 import asyncio
 from http import HTTPMethod
-from typing import Any, Type, TypeVar, overload
+from typing import Any, Type, TypeVar
 
 import httpx
 from fastapi import HTTPException, status
@@ -56,86 +56,19 @@ class HTTPAdapterBase:
 
         return payload.model_dump_json(exclude_unset=True, by_alias=True)
 
-    @overload
     async def _call_service(
         self,
         method: HTTPMethod,
         url: httpx.URL | str,
         *,
+        response_schema: Type[_TSchema],
         params: BaseModel | QueryParamTypes | None = None,
         payload: BaseModel | None = None,
-        response_schema: Type[_TSchema],  # overload reason
-        **other_request_kwargs: Any,
-    ) -> _TSchema:
-        """Normalize request options. Parse response."""
-
-    @overload
-    async def _call_service(
-        self,
-        method: HTTPMethod,
-        url: httpx.URL | str,
-        *,
-        params: BaseModel | QueryParamTypes | None = None,
-        payload: BaseModel | None = None,
-        response_schema: Type[_T],  # overload reason
-        **other_request_kwargs: Any,
-    ) -> _T:
-        """Normalize request options. Parse response."""
-
-    @overload
-    async def _call_service(
-        self,
-        method: HTTPMethod,
-        url: httpx.URL | str,
-        *,
-        params: BaseModel | QueryParamTypes | None = None,
-        payload: BaseModel | None = None,
-        response_schema: TypeAdapter[_T],  # overload reason
-        **other_request_kwargs: Any,
-    ) -> _T:
-        """Normalize request options. Parse response."""
-
-    @overload
-    async def _call_service(
-        self,
-        method: HTTPMethod,
-        url: httpx.URL | str,
-        *,
-        params: BaseModel | QueryParamTypes | None = None,
-        payload: BaseModel | None = None,
-        response_schema: None = None,  # overload reason
-        **other_request_kwargs: Any,
-    ) -> None:
-        """Normalize request options. No content response."""
-
-    # NOTE
-    # This overload is for unsupported special forms (such as Annotated, Union, etc.)
-    # Currently there is no way to type this correctly
-    # See https://github.com/python/typing/pull/1618
-    @overload
-    async def _call_service(
-        self,
-        method: HTTPMethod,
-        url: httpx.URL | str,
-        *,
-        params: BaseModel | QueryParamTypes | None = None,
-        payload: BaseModel | None = None,
-        response_schema: Any,  # overload reason
-        **other_request_kwargs: Any,
-    ) -> Any:
-        """Normalize request options. No content response."""
-
-    async def _call_service(
-        self,
-        method: HTTPMethod,
-        url: httpx.URL | str,
-        *,
-        params: BaseModel | QueryParamTypes | None = None,
-        payload: BaseModel | None = None,
-        response_schema: Any | None = None,
         validation_context: dict[str, Any] | None = None,
         **other_request_kwargs: Any,
-    ) -> _TSchema | _T | None:
+    ) -> _TSchema:
+        """Call external service and validate response."""
+
         response_with_content = True if response_schema else False
 
         url = self._use_url(url)
@@ -171,7 +104,7 @@ class HTTPAdapterBase:
                 response_schema, content, validation_context
             )
 
-        return None
+        return response_schema()
 
     async def _process_request(
         self,

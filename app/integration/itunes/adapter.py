@@ -4,6 +4,7 @@ from typing import Literal
 import httpx
 
 from app.common.base_adapter import HTTPAdapterBase
+from app.common.base_schemas import AppID
 from app.integration.itunes import schemas
 
 
@@ -15,7 +16,7 @@ class ItunesRSSAdapter(HTTPAdapterBase):
 
     async def get_reviews(
         self,
-        app_id: str,
+        app_id: AppID,
         page: int | None = None,
         sort_by: Literal["mostRecent"] | None = "mostRecent",
     ) -> schemas.ITunesReviewsResponse:
@@ -28,7 +29,7 @@ class ItunesRSSAdapter(HTTPAdapterBase):
 
     def _build_path(
         self,
-        app_id: str,
+        app_id: AppID,
         page: int | None,
         sort_by: Literal["mostRecent"] | None,
     ) -> httpx.URL:
